@@ -28,6 +28,22 @@
 
     _dataSource = [[NSMutableArray alloc] initWithObjects:@"中国",@"韩国",@"泰国",@"台湾",@"新加坡",@"香港",@"马拉西亚",@"菲律宾",@"美国",@"日本",@"澳门",@"越南",@"英国",@"欧盟",@"澳大利亚",@"加拿大",@"印度",@"俄罗斯",nil];
     _searchArray = [[NSMutableArray alloc] init];
+
+    _sectionArray = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i<27; i++) {
+        [self.sectionArray addObject:[NSMutableArray array]];
+    }
+    
+    for (NSString *string in self.dataSource) {
+        NSString *sectionName = [[NSString stringWithFormat:@"%c",pinyinFirstLetter([string characterAtIndex:0])] uppercaseString];
+        NSUInteger firstLetter = [ALPHA rangeOfString:[sectionName substringToIndex:1]].location;
+		if (firstLetter != NSNotFound)
+		{
+			[[self.sectionArray objectAtIndex:firstLetter] addObject:string];
+		}
+    }
+    
 }
 
 
@@ -82,10 +98,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark
+#pragma mark UITableViewDataSource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+
+    if (tableView == defaultTable) {
+        return 27;
+    }else{
+        return 1;
+    }
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
     if (tableView == defaultTable) {
-        return [self.dataSource count];
+        //return [self.dataSource count];
+        return [[self.sectionArray objectAtIndex:section] count];
     }else{
         return [self.searchArray count];
     }
@@ -99,11 +128,64 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifyer];
     }
     if (tableView == defaultTable) {
-        cell.textLabel.text = [self.dataSource objectAtIndex:indexPath.row];
+        cell.textLabel.text = [[self.sectionArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     }else{
         cell.textLabel.text = [self.searchArray objectAtIndex:indexPath.row];
     }
     return cell;
+}
+
+#pragma mark ---  索引相关
+
+//添加索引
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+	if (tableView == defaultTable)
+	{
+		NSMutableArray *indices = [NSMutableArray arrayWithObject:UITableViewIndexSearch];
+		for (int i = 0; i < 27; i++)
+		{
+			if ([[self.sectionArray objectAtIndex:i] count])
+			{
+				[indices addObject:[[ALPHA substringFromIndex:i] substringToIndex:1]];
+			}
+		}
+		return indices;
+	}
+	else
+	{
+		return nil;
+	}
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+	if (title == UITableViewIndexSearch)
+	{
+		[defaultTable scrollRectToVisible:_searchBar.frame animated:NO];
+		return -1;
+	}
+	return [ALPHA rangeOfString:title].location;
+}
+
+//为每个分区指定标题值
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	if (tableView == defaultTable)
+	{
+		if ([[self.sectionArray objectAtIndex:section] count] == 0)
+		{
+			return nil;
+		}
+		else
+		{
+			return [NSString stringWithFormat:@"%@", [[ALPHA substringFromIndex:section] substringToIndex:1]];
+		}
+	}
+	else
+	{
+		return nil;
+	}
 }
 
 #pragma  mark

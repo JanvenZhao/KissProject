@@ -13,11 +13,16 @@
     NSMutableArray *_dataSource;//默认
     NSMutableArray *_searchArray;
     
+    NSMutableArray *_sectionArray;
+    
+    
     UITableView *defaultTable;
     UISearchBar *_searchBar;
     UISearchDisplayController *dispalyController;
 }
 @property (nonatomic,retain)    NSMutableArray *dataSource;
 @property (nonatomic,retain)    NSMutableArray *searchArray;
+@property (nonatomic,retain)     NSMutableArray *sectionArray;
+
 
 @end
