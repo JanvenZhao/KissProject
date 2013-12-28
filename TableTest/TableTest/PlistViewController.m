@@ -19,6 +19,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        /*
+         @ plist 文件分为 Array和Dictionary 两种格式
+         创建以及初始化的时候注意，若是用Array方法初始化Dictionary类型的Plist会得到一个NULL
+         */
         [self readDataFromPlist];
     }
     return self;
@@ -65,9 +70,6 @@
         NSError *error;
         [manager removeItemAtPath:filename error:&error];
     }
-
-    
-    
 }
 
 - (void)viewDidLoad
