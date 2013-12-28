@@ -23,6 +23,10 @@
 		2A19930918652CE800845F3E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A19930818652CE800845F3E /* CustomCell.m */; };
 		2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A19930C18657A3100845F3E /* CalendarsRemindersViewController.m */; };
 		2A19930F18657B8100845F3E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A19930E18657B8100845F3E /* EventKit.framework */; };
+		2A5B4079186E9A8600279689 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B4078186E9A8600279689 /* ViewController.m */; };
+		2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B407C186E9D5D00279689 /* PlistViewController.m */; };
+		2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD906186EA3DB00C12850 /* PackingList.plist */; };
+		2A7BD909186EA9B100C12850 /* PackingLibrary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD908186EA9B100C12850 /* PackingLibrary.plist */; };
 		EDB44A69186C73B100A836A8 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB44A67186C73B100A836A8 /* pinyin.c */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,12 @@
 		2A19930B18657A3100845F3E /* CalendarsRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarsRemindersViewController.h; sourceTree = "<group>"; };
 		2A19930C18657A3100845F3E /* CalendarsRemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarsRemindersViewController.m; sourceTree = "<group>"; };
 		2A19930E18657B8100845F3E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		2A5B4077186E9A8600279689 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2A5B4078186E9A8600279689 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2A5B407B186E9D5D00279689 /* PlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistViewController.h; sourceTree = "<group>"; };
+		2A5B407C186E9D5D00279689 /* PlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistViewController.m; sourceTree = "<group>"; };
+		2A7BD906186EA3DB00C12850 /* PackingList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PackingList.plist; sourceTree = "<group>"; };
+		2A7BD908186EA9B100C12850 /* PackingLibrary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PackingLibrary.plist; sourceTree = "<group>"; };
 		EDB44A67186C73B100A836A8 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
 		EDB44A68186C73B100A836A8 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,10 +135,10 @@
 			children = (
 				2A1992E41864622800845F3E /* AppDelegate.h */,
 				2A1992E51864622800845F3E /* AppDelegate.m */,
-				2A19930B18657A3100845F3E /* CalendarsRemindersViewController.h */,
-				2A19930C18657A3100845F3E /* CalendarsRemindersViewController.m */,
-				EDB44A67186C73B100A836A8 /* pinyin.c */,
-				EDB44A68186C73B100A836A8 /* pinyin.h */,
+				2A5B4077186E9A8600279689 /* ViewController.h */,
+				2A5B4078186E9A8600279689 /* ViewController.m */,
+				2A5B407E186E9D6200279689 /* Plist */,
+				2A5B407A186E9D3D00279689 /* 字母索引 */,
 				2A19930A186579F800845F3E /* TableTest */,
 				2A1992E71864622800845F3E /* Images.xcassets */,
 				2A1992DC1864622800845F3E /* Supporting Files */,
@@ -174,6 +184,28 @@
 				2A19930818652CE800845F3E /* CustomCell.m */,
 			);
 			name = TableTest;
+			sourceTree = "<group>";
+		};
+		2A5B407A186E9D3D00279689 /* 字母索引 */ = {
+			isa = PBXGroup;
+			children = (
+				2A19930B18657A3100845F3E /* CalendarsRemindersViewController.h */,
+				2A19930C18657A3100845F3E /* CalendarsRemindersViewController.m */,
+				EDB44A67186C73B100A836A8 /* pinyin.c */,
+				EDB44A68186C73B100A836A8 /* pinyin.h */,
+			);
+			name = "字母索引";
+			sourceTree = "<group>";
+		};
+		2A5B407E186E9D6200279689 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				2A5B407B186E9D5D00279689 /* PlistViewController.h */,
+				2A5B407C186E9D5D00279689 /* PlistViewController.m */,
+				2A7BD906186EA3DB00C12850 /* PackingList.plist */,
+				2A7BD908186EA9B100C12850 /* PackingLibrary.plist */,
+			);
+			name = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +283,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7BD909186EA9B100C12850 /* PackingLibrary.plist in Resources */,
+				2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */,
 				2A1992E01864622800845F3E /* InfoPlist.strings in Resources */,
 				2A1992E81864622800845F3E /* Images.xcassets in Resources */,
 			);
@@ -271,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5B4079186E9A8600279689 /* ViewController.m in Sources */,
 				EDB44A69186C73B100A836A8 /* pinyin.c in Sources */,
 				2A1992E61864622800845F3E /* AppDelegate.m in Sources */,
+				2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */,
 				2A1992E21864622800845F3E /* main.m in Sources */,
 				2A19930918652CE800845F3E /* CustomCell.m in Sources */,
 				2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */,

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "CalendarsRemindersViewController.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
@@ -25,8 +26,14 @@
     self.window.rootViewController = nav;
     */
     
+    /*
     CalendarsRemindersViewController *root = [[CalendarsRemindersViewController   alloc] init];
     root.title = @"搜索";
+    UINavigationController *nav = [[UINavigationController   alloc] initWithRootViewController:root];
+    self.window.rootViewController = nav;
+     */
+    ViewController *root = [[ViewController   alloc] initWithStyle:UITableViewStylePlain];
+    root.title = @"example";
     UINavigationController *nav = [[UINavigationController   alloc] initWithRootViewController:root];
     self.window.rootViewController = nav;
     
