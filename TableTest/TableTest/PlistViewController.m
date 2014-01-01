@@ -37,6 +37,9 @@
     _myPackingList = [[NSMutableArray alloc] initWithContentsOfFile:resource_path];
     NSLog(@"detch The Array is %@",self.myPackingList);
     
+    /*
+     分析plist的层级关系
+     */
     for (int i = 0; i<[self.myPackingList count]; i++) {
         NSDictionary *dic = [self. myPackingList objectAtIndex:i];
         NSLog(@"Current title is %@",[dic objectForKey:@"title"]);

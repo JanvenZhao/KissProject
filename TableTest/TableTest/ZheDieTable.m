@@ -1,29 +1,36 @@
 //
-//  ViewController.m
+//  ZheDieTable.m
 //  TableTest
 //
-//  Created by 艺龙员工 on 13-12-28.
-//  Copyright (c) 2013年 艺龙员工. All rights reserved.
+//  Created by Janven Zhao on 14-1-1.
+//  Copyright (c) 2014年 艺龙员工. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "RootViewController.h"
-#import "CalendarsRemindersViewController.h"
-#import "PlistViewController.h"
 #import "ZheDieTable.h"
 
-@interface ViewController ()
+@interface ZheDieTable ()
 
 @end
 
-@implementation ViewController
+@implementation ZheDieTable
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",nil];
+        
+        NSArray *a = [NSArray arrayWithObjects:@"奥古斯丁",@"奥地利",@"澳大利亚",nil];
+        NSArray *b = [NSArray arrayWithObjects:@"保利",@"宝马",@"保加利亚", nil];
+        
+        _dataSource = [NSDictionary dictionaryWithObjectsAndKeys:a,@"A",b,@"B",nil];
+        
+        isOpen = [[NSMutableDictionary alloc] init];
+        
+        for (int i = 0; i < [[self.dataSource allKeys] count]; i++) {
+            NSString *string = [[self.dataSource allKeys] objectAtIndex:i];
+            [isOpen setValue:[NSNumber  numberWithBool:YES] forKey:string];
+        }
     }
     return self;
 }
@@ -50,26 +57,76 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [[self.dataSource allKeys] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.exampleArray count];
+    NSString *key = [[self.dataSource allKeys] objectAtIndex:section];
+    
+    BOOL yes = [[isOpen objectForKey:key] boolValue];
+    if (yes) {
+        return 0;
+    }else{
+        return [[self.dataSource objectForKey:key] count];
+    }
+    
+}
+
+//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+//
+//    return [[self.dataSource allKeys] objectAtIndex:section];
+//}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+
+    return 50;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    v.backgroundColor = [UIColor lightGrayColor];
+    v.alpha = 0.5;
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    NSString *string = [[self.dataSource allKeys] objectAtIndex:section];
+    [btn setTitle:string forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [btn setFrame:CGRectMake(0, 0, 320, 50)];
+    btn.tag = section;
+    [btn.titleLabel setTextAlignment:NSTextAlignmentLeft];
+    [btn addTarget:self action:@selector(displayTheContent:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [v addSubview:btn];
+    return v;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
+    if (cell == Nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     // Configure the cell...
-    cell.textLabel.text = [self.exampleArray objectAtIndex:indexPath.row];
+    NSString *key = [[self.dataSource allKeys] objectAtIndex:indexPath.section];
+    cell.textLabel.text = [[self.dataSource objectForKey:key] objectAtIndex:indexPath.row];
+    
     return cell;
 }
+
+-(void)displayTheContent:(id)sender{
+    
+    UIButton *btn = (UIButton *)sender;
+    NSString *key = [(UIButton *)sender titleLabel].text;
+
+    BOOL yes = [[isOpen objectForKey:key] boolValue];
+    [isOpen setValue:[NSNumber numberWithBool:!yes] forKey:key];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:btn.tag] withRowAnimation:UITableViewRowAnimationAutomatic];    
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -121,32 +178,5 @@
 }
 
  */
-
-#pragma  mark
-#pragma  mark UITableDelegate
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    NSString *title = [self.exampleArray objectAtIndex:indexPath.row];
-    
-    if (indexPath.row == 0) {
-        RootViewController *table = [[RootViewController alloc] init];
-        table.title = title;
-        [self.navigationController pushViewController:table animated:YES];
-    }else if (indexPath.row == 1){
-        CalendarsRemindersViewController *view = [[CalendarsRemindersViewController   alloc] init];
-        view.title = title;
-        [self.navigationController pushViewController:view animated:YES];
-    }else if (indexPath.row == 2){
-        PlistViewController *plist = [[PlistViewController alloc] init];
-        plist.title = title;
-        [self.navigationController pushViewController:plist animated:YES];
-    }else if (indexPath.row == 3){
-        ZheDieTable *table = [[ZheDieTable alloc] init];
-        table.title = title;
-        [self.navigationController pushViewController:table animated:YES];
-        
-    }
-}
 
 @end

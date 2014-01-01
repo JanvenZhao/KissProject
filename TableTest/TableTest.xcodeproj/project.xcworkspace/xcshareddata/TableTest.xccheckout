@@ -5,13 +5,15 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>930FF930-801F-458A-9D73-C78B81349F4B</string>
+	<string>65777A01-B7A3-4EBE-A348-AB8A8F1CF7B6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TableTest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A2BAD656-9CE1-4D16-8BE6-4BFF5CE55BC3</key>
 		<string>https://github.com/JanvenZhao/KissProject.git</string>
+		<key>FE678230-735F-4A49-8D45-8EFCFEC4499C</key>
+		<string>https://github.com/JanvenZhao/KissProject</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TableTest/TableTest.xcodeproj/project.xcworkspace</string>
@@ -19,9 +21,11 @@
 	<dict>
 		<key>A2BAD656-9CE1-4D16-8BE6-4BFF5CE55BC3</key>
 		<string>../../..</string>
+		<key>FE678230-735F-4A49-8D45-8EFCFEC4499C</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/JanvenZhao/KissProject.git</string>
+	<string>https://github.com/JanvenZhao/KissProject</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -35,6 +39,14 @@
 			<string>A2BAD656-9CE1-4D16-8BE6-4BFF5CE55BC3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KissProject</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FE678230-735F-4A49-8D45-8EFCFEC4499C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TableTest</string>
 		</dict>
 	</array>
 </dict>

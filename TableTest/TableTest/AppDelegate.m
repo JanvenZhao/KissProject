@@ -32,6 +32,7 @@
     UINavigationController *nav = [[UINavigationController   alloc] initWithRootViewController:root];
     self.window.rootViewController = nav;
      */
+    
     ViewController *root = [[ViewController   alloc] initWithStyle:UITableViewStylePlain];
     root.title = @"example";
     UINavigationController *nav = [[UINavigationController   alloc] initWithRootViewController:root];
