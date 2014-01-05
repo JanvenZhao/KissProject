@@ -124,7 +124,7 @@
 
     BOOL yes = [[isOpen objectForKey:key] boolValue];
     [isOpen setValue:[NSNumber numberWithBool:!yes] forKey:key];
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:btn.tag] withRowAnimation:UITableViewRowAnimationAutomatic];    
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:btn.tag] withRowAnimation:UITableViewRowAnimationFade];    
 }
 
 

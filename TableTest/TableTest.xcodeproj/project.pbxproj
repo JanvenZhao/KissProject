@@ -28,6 +28,9 @@
 		2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD906186EA3DB00C12850 /* PackingList.plist */; };
 		2A7BD909186EA9B100C12850 /* PackingLibrary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD908186EA9B100C12850 /* PackingLibrary.plist */; };
 		EDB44A69186C73B100A836A8 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB44A67186C73B100A836A8 /* pinyin.c */; };
+		EDEF46BA187909C00081612F /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF46B9187909C00081612F /* CustomTextField.m */; };
+		EDEF46BE18790AAC0081612F /* CTField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF46BD18790AAC0081612F /* CTField.m */; };
+		EDEF46C018790CF30081612F /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDEF46BF18790CF30081612F /* qq@2x.png */; };
 		EDF873F81873B1FA002CE946 /* ZheDieTable.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF873F71873B1FA002CE946 /* ZheDieTable.m */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,11 @@
 		2A7BD908186EA9B100C12850 /* PackingLibrary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PackingLibrary.plist; sourceTree = "<group>"; };
 		EDB44A67186C73B100A836A8 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
 		EDB44A68186C73B100A836A8 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		EDEF46B8187909C00081612F /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		EDEF46B9187909C00081612F /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		EDEF46BC18790AAC0081612F /* CTField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTField.h; sourceTree = "<group>"; };
+		EDEF46BD18790AAC0081612F /* CTField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTField.m; sourceTree = "<group>"; };
+		EDEF46BF18790CF30081612F /* qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@2x.png"; sourceTree = "<group>"; };
 		EDF873F61873B1FA002CE946 /* ZheDieTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZheDieTable.h; sourceTree = "<group>"; };
 		EDF873F71873B1FA002CE946 /* ZheDieTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZheDieTable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +148,7 @@
 				2A1992E51864622800845F3E /* AppDelegate.m */,
 				2A5B4077186E9A8600279689 /* ViewController.h */,
 				2A5B4078186E9A8600279689 /* ViewController.m */,
+				EDEF46BB187909C80081612F /* CustomTextField */,
 				EDF873F51873B1C6002CE946 /* TableView折叠 */,
 				2A5B407E186E9D6200279689 /* Plist */,
 				2A5B407A186E9D3D00279689 /* 字母索引 */,
@@ -153,6 +162,7 @@
 		2A1992DC1864622800845F3E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EDEF46BF18790CF30081612F /* qq@2x.png */,
 				2A1992DD1864622800845F3E /* TableTest-Info.plist */,
 				2A1992DE1864622800845F3E /* InfoPlist.strings */,
 				2A1992E11864622800845F3E /* main.m */,
@@ -210,6 +220,17 @@
 				2A7BD908186EA9B100C12850 /* PackingLibrary.plist */,
 			);
 			name = Plist;
+			sourceTree = "<group>";
+		};
+		EDEF46BB187909C80081612F /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF46B8187909C00081612F /* CustomTextField.h */,
+				EDEF46B9187909C00081612F /* CustomTextField.m */,
+				EDEF46BC18790AAC0081612F /* CTField.h */,
+				EDEF46BD18790AAC0081612F /* CTField.m */,
+			);
+			name = CustomTextField;
 			sourceTree = "<group>";
 		};
 		EDF873F51873B1C6002CE946 /* TableView折叠 */ = {
@@ -301,6 +322,7 @@
 			files = (
 				2A7BD909186EA9B100C12850 /* PackingLibrary.plist in Resources */,
 				2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */,
+				EDEF46C018790CF30081612F /* qq@2x.png in Resources */,
 				2A1992E01864622800845F3E /* InfoPlist.strings in Resources */,
 				2A1992E81864622800845F3E /* Images.xcassets in Resources */,
 			);
@@ -324,11 +346,13 @@
 				2A5B4079186E9A8600279689 /* ViewController.m in Sources */,
 				EDB44A69186C73B100A836A8 /* pinyin.c in Sources */,
 				2A1992E61864622800845F3E /* AppDelegate.m in Sources */,
+				EDEF46BE18790AAC0081612F /* CTField.m in Sources */,
 				2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */,
 				2A1992E21864622800845F3E /* main.m in Sources */,
 				2A19930918652CE800845F3E /* CustomCell.m in Sources */,
 				2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */,
 				EDF873F81873B1FA002CE946 /* ZheDieTable.m in Sources */,
+				EDEF46BA187909C00081612F /* CustomTextField.m in Sources */,
 				2A1993061864623B00845F3E /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

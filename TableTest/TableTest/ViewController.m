@@ -11,6 +11,7 @@
 #import "CalendarsRemindersViewController.h"
 #import "PlistViewController.h"
 #import "ZheDieTable.h"
+#import "CustomTextField.h"
 
 @interface ViewController ()
 
@@ -23,7 +24,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",nil];
+        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",nil];
     }
     return self;
 }
@@ -145,7 +146,10 @@
         ZheDieTable *table = [[ZheDieTable alloc] init];
         table.title = title;
         [self.navigationController pushViewController:table animated:YES];
-        
+    }else if (indexPath.row == 4){
+        CustomTextField *text = [[CustomTextField     alloc] init];
+        text.title = title;
+        [self.navigationController pushViewController:text animated:YES];
     }
 }
 
