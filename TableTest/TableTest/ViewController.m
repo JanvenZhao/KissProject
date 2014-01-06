@@ -12,6 +12,7 @@
 #import "PlistViewController.h"
 #import "ZheDieTable.h"
 #import "CustomTextField.h"
+#import "CopyViewController.h"
 
 @interface ViewController ()
 
@@ -24,7 +25,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",nil];
+        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",nil];
     }
     return self;
 }
@@ -150,6 +151,11 @@
         CustomTextField *text = [[CustomTextField     alloc] init];
         text.title = title;
         [self.navigationController pushViewController:text animated:YES];
+    }else if (indexPath.row == 5){
+        CopyViewController *copy = [[CopyViewController alloc] init];
+        copy.title = title;
+        [self.navigationController pushViewController:copy animated:YES];
+        
     }
 }
 
