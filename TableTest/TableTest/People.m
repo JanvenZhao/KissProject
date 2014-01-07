@@ -6,9 +6,47 @@
 //  Copyright (c) 2014年 艺龙员工. All rights reserved.
 //
 
+/*
+ *本类的深复制 可以有两种方法实现 1、通过归档 Archived－Data－UnArchived
+                                                       2、通过下面本类中的 MutableCopy,若是在容器中,容器的MutableCopy要自己写！
+ */
+
 #import "People.h"
 
 @implementation People
+
+-(id)init{
+
+    if (self = [super init]) {
+        //
+
+    }
+    return self;
+}
+
+
+//编码
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+
+    [aCoder encodeObject:_name forKey:@"name"];
+    [aCoder encodeObject:_school forKey:@"school"];
+    [aCoder encodeInt:_age forKey:@"age"];
+    
+}
+
+//解码
+- (id)initWithCoder:(NSCoder *)aDecoder{
+
+    if (self = [super init]) {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.school = [aDecoder decodeObjectForKey:@"school"];
+        self.age = [aDecoder decodeIntForKey:@"age"];
+    }
+    return self;
+    
+}
+
+
 
 -(id)copyWithZone:(NSZone *)zone{
 //浅复制

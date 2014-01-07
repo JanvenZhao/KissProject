@@ -10,9 +10,41 @@
 #import "People.h"
 #import "NSMutableArray+DeepCopy.h"
 
+
+@interface NSDictionary (JSON)
+
++(NSDictionary *)url:(NSURL *)_url;
+-(NSData *)toJson;
+
+@end
+
+@implementation NSDictionary (JSON)
+
++(NSDictionary *)url:(NSURL *)_url{
+
+    NSData *data = [NSData dataWithContentsOfURL:_url];
+    NSError *error;
+    id result = [NSJSONSerialization  JSONObjectWithData:data options:NSJSONReadingAllowFragments
+                                                   error:&error];
+    if (result) {
+        return result;
+    }
+    return nil;
+}
+-(NSData *)toJson{
+    NSError *error;
+    id data1 = [NSJSONSerialization dataWithJSONObject:self options:kNilOptions error:&error];
+    if (data1) {
+        return data1;
+    }
+    return nil;
+}
+
+@end
+
 @interface CopyViewController ()
 //延展
--(void)des;
+-(void)archivedArray:(NSArray *)array;
 
 @end
 
@@ -27,12 +59,14 @@
     return self;
 }
 
--(void)des{
 
-    NSLog(@"This is Extend Methord");
-    
+
+-(void)archivedArray:(NSArray *)array{
+
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:array];
+    NSMutableArray *arr = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSLog(@"%@",arr);
 }
-
 
 
 - (void)viewDidLoad
@@ -40,23 +74,31 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (int i = 0; i<3; i++) {
-        People *p = [[People alloc] init];
-        p.name = [NSString stringWithFormat:@"Name-%d",i];
-        p.school = [NSString stringWithFormat:@"School-%d",i];
-        p.age = i;
-        [array addObject:p];
-    }
     
-    //容器类的要自己实现深复制。。。
-    NSMutableArray *copy = [array deepMutableCopy];
+//    NSMutableArray *array = [[NSMutableArray alloc] init];
+//    for (int i = 0; i<3; i++) {
+//        People *p = [[People alloc] init];
+//        p.name = [NSString stringWithFormat:@"Name-%d",i];
+//        p.school = [NSString stringWithFormat:@"School-%d",i];
+//        p.age = i;
+//        [array addObject:p];
+//    }
+//    
+//    //容器类的要自己实现深复制。。。
+//    NSMutableArray *copy = [array deepMutableCopy];
+//    
+//    for (People *p in copy) {
+//        NSLog(@"%p",p);
+//    }
+//    
+//    [self archivedArray:copy];
+//    
+//
     
-    for (People *p in copy) {
-        NSLog(@"%p",p);
-    }
+//    NSDictionary* information =
+//    [NSDictionary dictionaryWithObjectsAndKeys: @"orange",@"apple",@"banana",@"fig",nil];
+//    NSData* json = [information toJson];
     
-    [self des];
     
 //    NSMutableString *string = [NSMutableString stringWithFormat:@"You"];
 //    NSLog(@"%p",string);

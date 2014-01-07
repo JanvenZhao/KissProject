@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface People : NSObject<NSCopying,NSMutableCopying>{
+@interface People : NSObject<NSCopying,NSMutableCopying,NSCoding>{
 
     NSString *_name;
     NSString *_school;
