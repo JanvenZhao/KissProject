@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @class CTField;
+@class CTButton;
 @interface CustomTextField : UIViewController<UITextFieldDelegate>
 {
     CTField *_textField;
+    CTButton *btn;
 }
 @end

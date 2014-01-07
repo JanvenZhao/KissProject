@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A13130B187BDD2300A5F7D4 /* CTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A13130A187BDD2300A5F7D4 /* CTButton.m */; };
 		2A1992D61864622800845F3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1992D51864622800845F3E /* Foundation.framework */; };
 		2A1992D81864622800845F3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1992D71864622800845F3E /* CoreGraphics.framework */; };
 		2A1992DA1864622800845F3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1992D91864622800845F3E /* UIKit.framework */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A131309187BDD2300A5F7D4 /* CTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTButton.h; sourceTree = "<group>"; };
+		2A13130A187BDD2300A5F7D4 /* CTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTButton.m; sourceTree = "<group>"; };
 		2A1992D21864622800845F3E /* TableTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1992D51864622800845F3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A1992D71864622800845F3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -252,6 +255,8 @@
 				EDEF46B9187909C00081612F /* CustomTextField.m */,
 				EDEF46BC18790AAC0081612F /* CTField.h */,
 				EDEF46BD18790AAC0081612F /* CTField.m */,
+				2A131309187BDD2300A5F7D4 /* CTButton.h */,
+				2A13130A187BDD2300A5F7D4 /* CTButton.m */,
 			);
 			name = CustomTextField;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				EDEF46BE18790AAC0081612F /* CTField.m in Sources */,
 				2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */,
 				2A1992E21864622800845F3E /* main.m in Sources */,
+				2A13130B187BDD2300A5F7D4 /* CTButton.m in Sources */,
 				2A19930918652CE800845F3E /* CustomCell.m in Sources */,
 				2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */,
 				EDF873F81873B1FA002CE946 /* ZheDieTable.m in Sources */,

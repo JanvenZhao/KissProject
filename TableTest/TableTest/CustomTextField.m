@@ -8,6 +8,7 @@
 
 #import "CustomTextField.h"
 #import "CTField.h"
+#import "CTButton.h"
 
 @interface CustomTextField ()
 
@@ -49,9 +50,31 @@
     [self.view addSubview:_textField];
     
     
+    btn = [CTButton buttonWithType:UIButtonTypeRoundedRect];
+    [btn setFrame:CGRectMake(10, 150, 300, 50)];
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 260)];
+    [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 100, 0, 0)];
+    [btn setImage:[UIImage imageNamed:@"qq.png"] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [btn setTitle:@"dasdasdasdasdasdadasdasdasdhjsadgfjkhsgFDJKHSADGFJKHSDAGFJKAGSDFJKHGASDHJFKGAKSJDGajkhgs" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    
     
     
 }
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+
+    [btn setTitle:textField.text forState:UIControlStateNormal];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

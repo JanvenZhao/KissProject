@@ -76,9 +76,6 @@
 //    NSString *i_copy = [i_string copy];
 //    NSLog(@"%p",i_copy);
 
-    
-    NSNumber *num = @10;
-    
 }
 
 - (void)didReceiveMemoryWarning
