@@ -25,7 +25,20 @@
          创建以及初始化的时候注意，若是用Array方法初始化Dictionary类型的Plist会得到一个NULL
          */
         
-        [self readDataFromPlist];
+        //[self readDataFromPlist];
+        
+        
+        NSMutableArray *array = [[NSMutableArray alloc] init];
+        [array addObject:@"A"];
+        [array addObject:@"B"];
+        [array addObject:@"C"];
+        [array addObject:@"D"];
+        NSLog(@"%@",array);
+        NSLog(@"The Last Object is %@",[array lastObject]);
+        NSLog(@"The First Object is %@",[array objectAtIndex:0]);
+        
+         NSLog(@"The Revers is %@",[[array reverseObjectEnumerator] allObjects]);
+        
     }
     return self;
 }

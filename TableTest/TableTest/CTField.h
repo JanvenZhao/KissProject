@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTField : UITextField
+typedef enum {
+    
+    CT_Setting_edit = 0,
+    CT_PackingLib_edit
+}CT_Type;
+
+
+@interface CTField : UITextField{
+
+    CT_Type _type;
+}
+@property (nonatomic,assign) CT_Type type;
+
+- (id)initWithFrame:(CGRect)frame andType:(CT_Type)aType;
 
 @end
