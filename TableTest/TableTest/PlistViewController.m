@@ -36,8 +36,12 @@
         NSLog(@"%@",array);
         NSLog(@"The Last Object is %@",[array lastObject]);
         NSLog(@"The First Object is %@",[array objectAtIndex:0]);
+        NSLog(@"The Revers is %@",[[array reverseObjectEnumerator] allObjects]);
         
-         NSLog(@"The Revers is %@",[[array reverseObjectEnumerator] allObjects]);
+        NSMutableArray *arrayB = [NSMutableArray arrayWithArray:array];
+        [arrayB removeObject:@"D"];
+        NSLog(@"%@",array);
+        [arrayB exchangeObjectAtIndex:0 withObjectAtIndex:[arrayB count]-1];
         
     }
     return self;
