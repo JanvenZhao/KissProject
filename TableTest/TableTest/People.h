@@ -13,9 +13,17 @@
     NSString *_name;
     NSString *_school;
     int _age;
+    float _height;
+    double _galary;
+    BOOL _married;
+    NSMutableArray *_childs;
 }
 @property (nonatomic,retain) NSString *name;
 @property (nonatomic,retain) NSString *school;
 @property (nonatomic) int age;
+@property (nonatomic) float height;
+@property (nonatomic,assign) double galary;
+@property (nonatomic) BOOL married;
+@property (nonatomic,retain) NSMutableArray *childs;
 
 @end

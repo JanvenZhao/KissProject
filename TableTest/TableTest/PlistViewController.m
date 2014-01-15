@@ -27,6 +27,7 @@
         
         //[self readDataFromPlist];
         
+        /*
         
         NSMutableArray *array = [[NSMutableArray alloc] init];
         [array addObject:@"A"];
@@ -42,6 +43,33 @@
         [arrayB removeObject:@"D"];
         NSLog(@"%@",array);
         [arrayB exchangeObjectAtIndex:0 withObjectAtIndex:[arrayB count]-1];
+        
+        */
+        
+        //String
+        
+        NSString *num = @"asdsadfsdafasdDASFDSAfSDF";
+        
+        BOOL ye = [[NSPredicate predicateWithFormat:@"SELF MATCHES '[A-Za-z]*'"] evaluateWithObject:num];
+        
+        if (ye) {
+            NSLog(@"全是字母");
+        }else{
+            NSLog(@"不完全是字幕呀");
+        }
+        
+        for (int i = 0; i < [num length]; i++) {
+            NSString *a = [num substringWithRange:NSMakeRange(i, 1)];
+            if ([[NSPredicate predicateWithFormat:@"SELF MATCHES '([a-zA-Z])'"] evaluateWithObject:a]) {
+                NSLog(@"%@",[num substringWithRange:NSMakeRange(i, 1)]);
+            }else{
+            
+                NSLog(@" 不是字母 %@",[num substringWithRange:NSMakeRange(i, 1)]);
+
+            }
+        }
+        
+        
         
     }
     return self;
@@ -97,6 +125,27 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+//    alert = [[UIAlertView alloc] initWithTitle:@"" message:@"some Tips" delegate:Nil
+//                                          cancelButtonTitle:nil otherButtonTitles:nil, nil];
+//    [alert show];
+//    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(dismissTheAlert) userInfo:nil repeats:NO];
+    
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:CGRectMake(0, 0, 44, 44)];
+    [button setTitle:@"确认" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+  //  [button setTitleColor:[UIColor greenColor] forState:UIControlStateDisabled];
+    [button setEnabled:NO];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    [self.navigationItem setRightBarButtonItem:item animated:YES];
+    
+    
+}
+
+-(void)dismissTheAlert{
+    [alert dismissWithClickedButtonIndex:0 animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

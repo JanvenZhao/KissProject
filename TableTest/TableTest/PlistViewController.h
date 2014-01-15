@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlistViewController : UIViewController
+@interface PlistViewController : UIViewController{
+
+    UIAlertView *alert;
+    
+}
 
 @property (nonatomic,retain) NSMutableDictionary *origin_Dic;
 @property (nonatomic,retain) NSMutableArray *myPackingList;

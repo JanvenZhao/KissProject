@@ -9,7 +9,7 @@
 #import "CopyViewController.h"
 #import "People.h"
 #import "NSMutableArray+DeepCopy.h"
-
+#import "ClassExtend.h"
 
 @interface NSDictionary (JSON)
 
@@ -117,6 +117,16 @@
 //
 //    NSString *i_copy = [i_string copy];
 //    NSLog(@"%p",i_copy);
+    
+    //
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"zhao",@"name",@"Peking",@"school",[NSNumber numberWithInt:29],@"age",[NSNumber numberWithFloat:12.0f],@"height",[NSNumber numberWithBool:YES],@"married",[NSArray array],@"childs",[NSNumber  numberWithDouble:12.56],@"galary",nil];
+    People *peo = [[People alloc] init];
+    [peo convertObjectFromGievnDictionary:dic];
+//    NSLog(@"peo is %@",peo);
+    NSDictionary *another = [peo convertDictionary];
+    NSLog(@"another is %@",another);
+    [peo listAndPritfAllPropers];
+    
 
 }
 
