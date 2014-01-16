@@ -74,18 +74,22 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (int i = 0; i<3; i++) {
-        People *p = [[People alloc] init];
-        p.name = [NSString stringWithFormat:@"Name-%d",i];
-        p.school = [NSString stringWithFormat:@"School-%d",i];
-        p.age = i;
-        [array addObject:p];
-    }
-//
+//    
+//    NSMutableArray *array = [[NSMutableArray alloc] init];
+//    for (int i = 0; i<3; i++) {
+//        People *p = [[People alloc] init];
+//        p.name = [NSString stringWithFormat:@"Name-%d",i];
+//        p.school = [NSString stringWithFormat:@"School-%d",i];
+//        p.age = i;
+//        [array addObject:p];
+//        [p release];
+//    }
+
+    //
 //    //容器类的要自己实现深复制。。。
-    NSMutableArray *copy = [array deepMutableCopy];
+    //NSMutableArray *copy = [array deepMutableCopy];
+    
+    //NSLog(@"copy retainCount is %d",[copy retainCount]);
 //    
 //    for (People *p in copy) {
 //        NSLog(@"%p",p);
@@ -119,14 +123,24 @@
 //    NSLog(@"%p",i_copy);
     
     //
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"zhao",@"name",@"Peking",@"school",[NSNumber numberWithInt:29],@"age",[NSNumber numberWithFloat:12.0f],@"height",[NSNumber numberWithBool:YES],@"married",[NSArray array],@"childs",[NSNumber  numberWithDouble:12.56],@"galary",nil];
+    NSMutableArray *t = [[NSMutableArray alloc] initWithObjects:@"王二",@"李斯",@"张三", nil];
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                         @"zhao",@"name",
+                         @"Peking",@"school",
+                         [NSNumber numberWithInt:29],@"age",
+                         [NSNumber numberWithFloat:12.0f],@"height",
+                         [NSNumber numberWithBool:YES],@"married",
+                         t,@"childs",
+                         [NSNumber  numberWithDouble:12.56],@"galary",nil];
+    [t release];
     People *peo = [[People alloc] init];
     [peo convertObjectFromGievnDictionary:dic];
-//    NSLog(@"peo is %@",peo);
-    NSDictionary *another = [peo convertDictionary];
+    NSLog(@"peo is %@",peo);
+    NSDictionary *another = [peo convertDictionaryFromObjet];
     NSLog(@"another is %@",another);
-    [peo listAndPritfAllPropers];
-    
+      [peo listAndPritfAllPropers];
+    [peo release];
 
 }
 

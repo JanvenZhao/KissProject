@@ -26,10 +26,19 @@
          _height = 0.0f;
          _galary = 0;
          _married = NO;
-         _childs = [NSMutableArray arrayWithObjects:@"A",@"B",nil];
+         _childs = [[NSMutableArray alloc] init];
 
     }
     return self;
+}
+
+-(void)dealloc{
+    
+    //...
+    [_name release];
+    [_school release];
+    [_childs release];
+    [super dealloc];
 }
 
 //编码
@@ -39,7 +48,7 @@
     [aCoder encodeObject:_school forKey:@"school"];
     [aCoder encodeInt:_age forKey:@"age"];
     [aCoder encodeFloat:_height forKey:@"height"];
-   [aCoder encodeDouble:_galary forKey:@"galary"];
+    [aCoder encodeDouble:_galary forKey:@"galary"];
     [aCoder encodeBool:_married forKey:@"married"];
     [aCoder encodeObject:_childs forKey:@"childs"];
 }
@@ -79,15 +88,36 @@
 -(id)mutableCopyWithZone:(NSZone *)zone{
 //深复制
     People *per = [[self class] allocWithZone:zone];
+    
     //实现深复制 必须使用 MutableCopy ,因为本来声明的属性使用的NSString，此处再次使用copy的话，仍然是指针复制
-    per.name = [_name mutableCopy];
-    per.school = [_school mutableCopy];
+   
+    per.name = [self safeMutableCopy:_name];
+    per.school = [self safeMutableCopy:_school];
+    
+    /*The Same With The Over
+     per.name = [[_name mutableCopy] autorelease];
+     per.school = [[_school mutableCopy] autorelease];
+     */
+
+    //弱引用，无需release 这种方式 和上面的方式都可以,不推荐！
+    /*
+    per->_name = [_name mutableCopy];
+    per->_school = [_school mutableCopy];
+    */
+    
     per.age = _age;
     per.height = _height;
     per.galary = _galary;
     per.married = _married;
     per.childs = [_childs deepMutableCopy];//注意这个，若其中包含的是自定义Model的话 要手动实现深复制
     return per;
+}
+
+-(NSString *)safeMutableCopy:(NSString *)origin{
+ 
+    NSString *string = [origin mutableCopy];
+    return [string autorelease];
+    
 }
 
 @end

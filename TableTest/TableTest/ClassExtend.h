@@ -14,7 +14,7 @@
 
 @interface NSObject (Utility)
 
-- (NSDictionary *)convertDictionary;
+- (NSDictionary *)convertDictionaryFromObjet;
 - (void)convertObjectFromGievnDictionary:(NSDictionary*) dict;
 -(void)listAndPritfAllPropers;
 

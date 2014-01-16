@@ -11,36 +11,19 @@
 @implementation NSMutableArray (DeepCopy)
 
 -(NSMutableArray *)deepMutableCopy{
-
-    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:[self count]];
+    
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
     for (id value in self) {
         id copyValue = nil;
-        if ([value respondsToSelector:@selector(deepMutableCopy)]) {
-            NSLog(@"value retainCont is %d",[value retainCount]);
-            copyValue = [value deepMutableCopy];
-            NSLog(@"value retainCont is %d",[value retainCount]);
-            NSLog(@"copyValue retainCont is %d",[copyValue retainCount]);
-
-            [array addObject:copyValue];
-            NSLog(@"copyValue retainCont is %d",[copyValue retainCount]);
-
-            [copyValue release];
-            NSLog(@"copyValue retainCont is %d",[copyValue retainCount]);
-
-            
-        }else if ([value respondsToSelector:@selector(mutableCopy)]){
-            
+        
+        if ([value respondsToSelector:@selector(mutableCopy)]){
             copyValue = [value mutableCopy];
-            [array addObject:copyValue];
-            [copyValue release];
         }
         if (copyValue == nil) {
             copyValue = [value copy];
-            
-            [array addObject:copyValue];
-            [copyValue release];
         }
-
+        [array addObject:copyValue];
+        [copyValue release];
     }
     return array;
 }

@@ -29,8 +29,8 @@
 		2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD906186EA3DB00C12850 /* PackingList.plist */; };
 		2A7BD909186EA9B100C12850 /* PackingLibrary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD908186EA9B100C12850 /* PackingLibrary.plist */; };
 		2A8BDA23188636F20053E50E /* ClassExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8BDA22188636F20053E50E /* ClassExtend.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BC187AE89E001AC6FA /* CopyViewController.m */; };
-		ED05E0C0187AE9C6001AC6FA /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BF187AE9C6001AC6FA /* People.m */; };
+		ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BC187AE89E001AC6FA /* CopyViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ED05E0C0187AE9C6001AC6FA /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BF187AE9C6001AC6FA /* People.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0C2187AF494001AC6FA /* NSMutableArray+DeepCopy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EDB44A69186C73B100A836A8 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB44A67186C73B100A836A8 /* pinyin.c */; };
 		EDEF46BA187909C00081612F /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF46B9187909C00081612F /* CustomTextField.m */; };
