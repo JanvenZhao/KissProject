@@ -12,6 +12,7 @@
  */
 
 #import "People.h"
+#import "NSMutableArray+DeepCopy.h"
 
 @implementation People
 
@@ -25,7 +26,7 @@
          _height = 0.0f;
          _galary = 0;
          _married = NO;
-         _childs = [NSMutableArray array];
+         _childs = [NSMutableArray arrayWithObjects:@"A",@"B",nil];
 
     }
     return self;
@@ -85,7 +86,7 @@
     per.height = _height;
     per.galary = _galary;
     per.married = _married;
-    per.childs = [_childs mutableCopy];//注意这个，若其中包含的是自定义Model的话 要手动实现深复制
+    per.childs = [_childs deepMutableCopy];//注意这个，若其中包含的是自定义Model的话 要手动实现深复制
     return per;
 }
 

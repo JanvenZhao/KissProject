@@ -75,17 +75,17 @@
 	// Do any additional setup after loading the view.
     
     
-//    NSMutableArray *array = [[NSMutableArray alloc] init];
-//    for (int i = 0; i<3; i++) {
-//        People *p = [[People alloc] init];
-//        p.name = [NSString stringWithFormat:@"Name-%d",i];
-//        p.school = [NSString stringWithFormat:@"School-%d",i];
-//        p.age = i;
-//        [array addObject:p];
-//    }
-//    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (int i = 0; i<3; i++) {
+        People *p = [[People alloc] init];
+        p.name = [NSString stringWithFormat:@"Name-%d",i];
+        p.school = [NSString stringWithFormat:@"School-%d",i];
+        p.age = i;
+        [array addObject:p];
+    }
+//
 //    //容器类的要自己实现深复制。。。
-//    NSMutableArray *copy = [array deepMutableCopy];
+    NSMutableArray *copy = [array deepMutableCopy];
 //    
 //    for (People *p in copy) {
 //        NSLog(@"%p",p);
