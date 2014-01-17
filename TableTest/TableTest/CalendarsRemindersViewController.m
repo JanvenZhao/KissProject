@@ -7,10 +7,14 @@
 //
 
 #import "CalendarsRemindersViewController.h"
-#import "pinyin.h"
+//#import "pinyin.h"
+#import "ChineseToPinyin.h"//包含有 pinyin
 @interface CalendarsRemindersViewController ()
 
 @end
+
+#define ALPHA	@"ABCDEFGHIJKLMNOPQRSTUVWXYZ#"
+
 
 @implementation CalendarsRemindersViewController
 
@@ -44,7 +48,10 @@
 		}
     }
     
+    //
 }
+
+
 
 
 -(BOOL)searchResult:(NSString *)contactName searchText:(NSString *)searchT
@@ -226,6 +233,29 @@
     
 }
 
+//得到文字的首字母简拼
+-(NSString *)getLetterStringFromGivenString:(NSString *)string{
+    
+    NSString *result = @"";
+    for (int i = 0; i < [string length]; i++) {
+        if([result length] < 1)
+        {
+            result = [NSString stringWithFormat:@"%c",pinyinFirstLetter([string characterAtIndex:i])];
+        }
+        else
+        {
+            result = [NSString stringWithFormat:@"%@%c",result,pinyinFirstLetter([string characterAtIndex:i])];
+        }
+    }
+    return result;
+}
+
+-(NSString *)getQuanPingFromGivenString:(NSString  *)string{
+
+    return [ChineseToPinyin pinyinFromChiniseString:string];
+    
+}
+
 #pragma mark
 #pragma mark UISearDisplayControllerDelegate
 
@@ -241,30 +271,59 @@
     
     for (NSString *string in self.dataSource) {
         
-        //NSString *a = [NSString stringWithCString:[string UTF8String] encoding:NSUTF8StringEncoding];
-        //NSLog(@"a ---  %@",a);
+        //名字 汉字
+        NSComparisonResult result = [string compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        //全拼
+        NSComparisonResult result1 = [[self getQuanPingFromGivenString:string] compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        //首字母 简拼
+        NSComparisonResult result2 = [[self getLetterStringFromGivenString:string] compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
         
-        NSString *name = @"";
-		for (int i = 0; i < [string length]; i++)
-		{
-			if([name length] < 1)
-			{
-				name = [NSString stringWithFormat:@"%c",pinyinFirstLetter([string characterAtIndex:i])];
-			}
-			else
-			{
-				name = [NSString stringWithFormat:@"%@%c",name,pinyinFirstLetter([string characterAtIndex:i])];
-			}
-		}
-        
-        if ([self searchResult:name searchText:searchText]) {
+        if (result == NSOrderedSame || result1 == NSOrderedSame || result2 == NSOrderedSame)
+        {
             [self.searchArray addObject:string];
         }
+        
     }
     NSLog(@"%@",self.searchArray);
     [dispalyController.searchResultsTableView reloadData];
 }
 
+
+/* 只支持 首字母简拼
+ 
+ - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+ 
+ NSLog(@"searchText is %@",searchText);
+ 
+ if ([self.searchArray count] != 0) {
+ [self.searchArray removeAllObjects];
+ }
+ 
+ 
+ for (NSString *string in self.dataSource) {
+ 
+ NSString *name = @"";
+ for (int i = 0; i < [string length]; i++)
+ {
+ if([name length] < 1)
+ {
+ name = [NSString stringWithFormat:@"%c",pinyinFirstLetter([string characterAtIndex:i])];
+ }
+ else
+ {
+ name = [NSString stringWithFormat:@"%@%c",name,pinyinFirstLetter([string characterAtIndex:i])];
+ }
+ }
+ 
+ if ([self searchResult:name searchText:searchText]) {
+ [self.searchArray addObject:string];
+ }
+ }
+ NSLog(@"%@",self.searchArray);
+ [dispalyController.searchResultsTableView reloadData];
+ }
+
+ */
 
 
 @end

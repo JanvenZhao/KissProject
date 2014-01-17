@@ -13,6 +13,7 @@
 #import "ZheDieTable.h"
 #import "CustomTextField.h"
 #import "CopyViewController.h"
+#import "SortViewController.h"
 
 @interface ViewController ()
 
@@ -25,7 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",nil];
+        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",@"排序",nil];
     }
     return self;
 }
@@ -155,7 +156,10 @@
         CopyViewController *copy = [[CopyViewController alloc] init];
         copy.title = title;
         [self.navigationController pushViewController:copy animated:YES];
-        
+    }else if (indexPath.row == 6){
+        SortViewController *sort = [[SortViewController alloc] init];
+        sort.title = title;
+        [self.navigationController pushViewController:sort animated:YES];
     }
 }
 

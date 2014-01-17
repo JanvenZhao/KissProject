@@ -37,7 +37,7 @@
     //_textField.inputView  =accessory;
     //_textField.inputAccessoryView = accessory;
     
-    _textField = [[CTField alloc] initWithFrame:CGRectMake(20, 50, 280, 40)];
+    _textField = [[CTField alloc] initWithFrame:CGRectMake(20, 50, 280, 40) andType:CT_PackingLib_edit];
     _textField.placeholder = @"新建一项";
     _textField.borderStyle = UITextBorderStyleRoundedRect;
     _textField.textAlignment = NSTextAlignmentLeft;
@@ -50,16 +50,16 @@
     [self.view addSubview:_textField];
     
     
-    btn = [CTButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setFrame:CGRectMake(10, 150, 300, 50)];
-    [btn setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 260)];
-    [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 100, 0, 0)];
-    [btn setImage:[UIImage imageNamed:@"qq.png"] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [btn setTitle:@"dasdasdasdasdasdadasdasdasdhjsadgfjkhsgFDJKHSADGFJKHSDAGFJKAGSDFJKHGASDHJFKGAKSJDGajkhgs" forState:UIControlStateNormal];
-    [self.view addSubview:btn];
-    
+//    btn = [CTButton buttonWithType:UIButtonTypeRoundedRect];
+//    [btn setFrame:CGRectMake(10, 150, 300, 50)];
+//    [btn setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 260)];
+//    [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 100, 0, 0)];
+//    [btn setImage:[UIImage imageNamed:@"qq.png"] forState:UIControlStateNormal];
+//    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    
+//    [btn setTitle:@"dasdasdasdasdasdadasdasdasdhjsadgfjkhsgFDJKHSADGFJKHSDAGFJKAGSDFJKHGASDHJFKGAKSJDGajkhgs" forState:UIControlStateNormal];
+//    [self.view addSubview:btn];
+//    
     
     
 }

@@ -69,7 +69,7 @@
     if (self.type == CT_Setting_edit) {
         inset = CGRectMake(bounds.origin.x +30, bounds.origin.y+15, bounds.size.width -30, bounds.size.height-15);
     }else if (self.type == CT_PackingLib_edit){
-        inset = CGRectMake(bounds.origin.x +45, bounds.origin.y+15, bounds.size.width -45, bounds.size.height-15);
+        inset = CGRectMake(bounds.origin.x +23, bounds.origin.y+15, bounds.size.width -45, bounds.size.height-15);
     }
 
     return inset;
@@ -82,7 +82,7 @@
     if (self.type == CT_Setting_edit) {
         inset = CGRectMake(bounds.origin.x +10, bounds.origin.y+15.5, 13,13);
     }else if (self.type == CT_PackingLib_edit){
-        inset = CGRectMake(bounds.origin.x +23, bounds.origin.y+15.5, 13,13);
+        inset = CGRectMake(bounds.origin.x +23, bounds.origin.y, 13,13);
     }
     return inset;
 }
