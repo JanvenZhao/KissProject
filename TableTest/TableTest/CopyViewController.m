@@ -42,6 +42,24 @@
 
 @end
 
+
+@interface NSArray (description)
+
+@end
+
+@implementation NSArray (description)
+
+-(void)description{
+
+    for (id object in self) {
+        NSLog(@"id->%@,  retainCout is %d",[object name],[object retainCount]);
+    }
+    
+}
+
+@end
+
+
 @interface CopyViewController ()
 //延展
 -(void)archivedArray:(NSArray *)array;
@@ -63,9 +81,18 @@
 
 -(void)archivedArray:(NSArray *)array{
 
+    NSLog(@"%d",[array retainCount]);
+    [array description];
+    
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:array];
+    NSLog(@"%d",[array retainCount]);
+    [array description];
+
     NSMutableArray *arr = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    NSLog(@"%@",arr);
+    NSLog(@"%d",[arr retainCount]);
+
+    [arr description];
+    
 }
 
 
@@ -74,55 +101,43 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    
-//    NSMutableArray *array = [[NSMutableArray alloc] init];
-//    for (int i = 0; i<3; i++) {
-//        People *p = [[People alloc] init];
-//        p.name = [NSString stringWithFormat:@"Name-%d",i];
-//        p.school = [NSString stringWithFormat:@"School-%d",i];
-//        p.age = i;
-//        [array addObject:p];
-//        [p release];
-//    }
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (int i = 0; i<3; i++) {
+        People *p = [[People alloc] init];
+        p.name = [NSString stringWithFormat:@"Name-%d",i];
+        p.school = [NSString stringWithFormat:@"School-%d",i];
+        p.age = i;
+        [array addObject:p];
+        [p release];
+    }
+    
+    [self archivedArray:array];
+    [array release];
+    array = nil;
 
-    //
-//    //容器类的要自己实现深复制。。。
-    //NSMutableArray *copy = [array deepMutableCopy];
+    if (array) {
+        NSLog(@"Error");
+    }
     
-    //NSLog(@"copy retainCount is %d",[copy retainCount]);
-//    
-//    for (People *p in copy) {
-//        NSLog(@"%p",p);
-//    }
-//    
-//    [self archivedArray:copy];
-//    
+    //容器类的要自己实现深复制。。。
+//    NSMutableArray *copy = [array deepMutableCopy];
 //
+//    NSLog(@"copy retainCount is %d",[copy retainCount]);
+//        
+//        for (People *p in copy) {
+//            NSLog(@"%p",p);
+//        }
     
-//    NSDictionary* information =
-//    [NSDictionary dictionaryWithObjectsAndKeys: @"orange",@"apple",@"banana",@"fig",nil];
-//    NSData* json = [information toJson];
+ 
+
+    //[self customObjectWithDic];
+ 
+}
+
+-(void)customObjectWithDic{
+
     
-    
-//    NSMutableString *string = [NSMutableString stringWithFormat:@"You"];
-//    NSLog(@"%p",string);
-//    NSString *mu_copy = [string copy];
-//    NSLog(@"%p",mu_copy);
-//
-//    NSMutableString *mu_muCopy = [string mutableCopy];
-//    NSLog(@"%p",mu_muCopy);
-//
-//    
-//    NSString *i_string = [NSString stringWithFormat:@"Me"];
-//    NSLog(@"%p",i_string);
-//
-//    NSMutableString *mu_s_copy = [i_string mutableCopy];
-//    NSLog(@"%p",mu_s_copy);
-//
-//    NSString *i_copy = [i_string copy];
-//    NSLog(@"%p",i_copy);
-    
-    //
     NSMutableArray *t = [[NSMutableArray alloc] initWithObjects:@"王二",@"李斯",@"张三", nil];
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -139,9 +154,10 @@
     NSLog(@"peo is %@",peo);
     NSDictionary *another = [peo convertDictionaryFromObjet];
     NSLog(@"another is %@",another);
-      [peo listAndPritfAllPropers];
+    [peo listAndPritfAllPropers];
     [peo release];
 
+    
 }
 
 - (void)didReceiveMemoryWarning
