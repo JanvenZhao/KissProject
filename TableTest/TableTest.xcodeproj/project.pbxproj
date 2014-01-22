@@ -31,6 +31,11 @@
 		2A8BDA23188636F20053E50E /* ClassExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8BDA22188636F20053E50E /* ClassExtend.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2A94BE6A1889113800B298D1 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94BE681889113800B298D1 /* ChineseToPinyin.m */; };
 		2A94BE6E1889159500B298D1 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94BE6D1889159500B298D1 /* SortViewController.m */; };
+		2ACCA4B9188F616D00C17151 /* DesignPatterns.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4B8188F616D00C17151 /* DesignPatterns.m */; };
+		2ACCA4BD188F61A600C17151 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4BC188F61A600C17151 /* Animal.m */; };
+		2ACCA4C0188F61B300C17151 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4BF188F61B300C17151 /* Dog.m */; };
+		2ACCA4C3188F61BF00C17151 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4C2188F61BF00C17151 /* Cat.m */; };
+		2ACCA4C8188F6E4000C17151 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4C7188F6E4000C17151 /* HttpRequest.m */; };
 		ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BC187AE89E001AC6FA /* CopyViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C0187AE9C6001AC6FA /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BF187AE9C6001AC6FA /* People.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0C2187AF494001AC6FA /* NSMutableArray+DeepCopy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -88,6 +93,17 @@
 		2A94BE691889113800B298D1 /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
 		2A94BE6C1889159500B298D1 /* SortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
 		2A94BE6D1889159500B298D1 /* SortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
+		2ACCA4B7188F616D00C17151 /* DesignPatterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignPatterns.h; sourceTree = "<group>"; };
+		2ACCA4B8188F616D00C17151 /* DesignPatterns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignPatterns.m; sourceTree = "<group>"; };
+		2ACCA4BB188F61A600C17151 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		2ACCA4BC188F61A600C17151 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		2ACCA4BE188F61B300C17151 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		2ACCA4BF188F61B300C17151 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		2ACCA4C1188F61BF00C17151 /* Cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cat.h; sourceTree = "<group>"; };
+		2ACCA4C2188F61BF00C17151 /* Cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
+		2ACCA4C5188F65F600C17151 /* AnimalTestPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalTestPro.h; sourceTree = "<group>"; };
+		2ACCA4C6188F6E4000C17151 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		2ACCA4C7188F6E4000C17151 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		ED05E0BB187AE89E001AC6FA /* CopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
 		ED05E0BC187AE89E001AC6FA /* CopyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
 		ED05E0BE187AE9C6001AC6FA /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
@@ -166,6 +182,7 @@
 				2A1992E51864622800845F3E /* AppDelegate.m */,
 				2A5B4077186E9A8600279689 /* ViewController.h */,
 				2A5B4078186E9A8600279689 /* ViewController.m */,
+				2ACCA4BA188F617300C17151 /* Design */,
 				2A94BE6B1889157E00B298D1 /* Sort */,
 				ED05E0BA187AE880001AC6FA /* Copy */,
 				EDEF46BB187909C80081612F /* CustomTextField */,
@@ -249,6 +266,24 @@
 				2A94BE6D1889159500B298D1 /* SortViewController.m */,
 			);
 			name = Sort;
+			sourceTree = "<group>";
+		};
+		2ACCA4BA188F617300C17151 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				2ACCA4B7188F616D00C17151 /* DesignPatterns.h */,
+				2ACCA4B8188F616D00C17151 /* DesignPatterns.m */,
+				2ACCA4C5188F65F600C17151 /* AnimalTestPro.h */,
+				2ACCA4BB188F61A600C17151 /* Animal.h */,
+				2ACCA4BC188F61A600C17151 /* Animal.m */,
+				2ACCA4BE188F61B300C17151 /* Dog.h */,
+				2ACCA4BF188F61B300C17151 /* Dog.m */,
+				2ACCA4C1188F61BF00C17151 /* Cat.h */,
+				2ACCA4C2188F61BF00C17151 /* Cat.m */,
+				2ACCA4C6188F6E4000C17151 /* HttpRequest.h */,
+				2ACCA4C7188F6E4000C17151 /* HttpRequest.m */,
+			);
+			name = Design;
 			sourceTree = "<group>";
 		};
 		ED05E0BA187AE880001AC6FA /* Copy */ = {
@@ -391,18 +426,23 @@
 			files = (
 				ED05E0C0187AE9C6001AC6FA /* People.m in Sources */,
 				2A5B4079186E9A8600279689 /* ViewController.m in Sources */,
+				2ACCA4C0188F61B300C17151 /* Dog.m in Sources */,
+				2ACCA4C8188F6E4000C17151 /* HttpRequest.m in Sources */,
 				ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */,
 				2A1992E61864622800845F3E /* AppDelegate.m in Sources */,
 				EDEF46BE18790AAC0081612F /* CTField.m in Sources */,
 				2A8BDA23188636F20053E50E /* ClassExtend.m in Sources */,
 				2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */,
 				2A1992E21864622800845F3E /* main.m in Sources */,
+				2ACCA4C3188F61BF00C17151 /* Cat.m in Sources */,
+				2ACCA4BD188F61A600C17151 /* Animal.m in Sources */,
 				2A13130B187BDD2300A5F7D4 /* CTButton.m in Sources */,
 				2A19930918652CE800845F3E /* CustomCell.m in Sources */,
 				2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */,
 				EDF873F81873B1FA002CE946 /* ZheDieTable.m in Sources */,
 				ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */,
 				2A94BE6E1889159500B298D1 /* SortViewController.m in Sources */,
+				2ACCA4B9188F616D00C17151 /* DesignPatterns.m in Sources */,
 				EDEF46BA187909C00081612F /* CustomTextField.m in Sources */,
 				2A94BE6A1889113800B298D1 /* ChineseToPinyin.m in Sources */,
 				2A1993061864623B00845F3E /* RootViewController.m in Sources */,

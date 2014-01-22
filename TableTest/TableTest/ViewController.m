@@ -14,6 +14,7 @@
 #import "CustomTextField.h"
 #import "CopyViewController.h"
 #import "SortViewController.h"
+#import "DesignPatterns.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",@"排序",nil];
+        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",@"排序",@"设计模式",nil];
     }
     return self;
 }
@@ -160,6 +161,13 @@
         SortViewController *sort = [[SortViewController alloc] init];
         sort.title = title;
         [self.navigationController pushViewController:sort animated:YES];
+    }else if (indexPath.row == 7){
+    
+        DesignPatterns *design = [[DesignPatterns alloc] init];
+        design.title = title;
+        [self.navigationController pushViewController:design animated:YES];
+        
+        
     }
 }
 
