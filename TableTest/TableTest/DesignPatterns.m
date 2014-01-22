@@ -11,6 +11,7 @@
 #import "Dog.h"
 #import "Cat.h"
 #import "HttpRequest.h"
+#import "Singelton.h"
 
 @interface DesignPatterns ()
 
@@ -37,6 +38,14 @@
 //    [dog proA];
 //    [dog proB];
     
+    
+    Singelton *single = [Singelton   getInstance];
+    Singelton    *a = [Singelton getInstance];
+    if (single == a) {
+        NSLog(@"Good");
+    }else{
+        NSLog(@"Error on Create A Singleton");
+    }
     
     /*
      *以下测试 NSOperationQueue && NSoperation

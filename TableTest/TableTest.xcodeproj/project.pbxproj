@@ -36,6 +36,7 @@
 		2ACCA4C0188F61B300C17151 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4BF188F61B300C17151 /* Dog.m */; };
 		2ACCA4C3188F61BF00C17151 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4C2188F61BF00C17151 /* Cat.m */; };
 		2ACCA4C8188F6E4000C17151 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4C7188F6E4000C17151 /* HttpRequest.m */; };
+		2ACCA4CB188F9EC400C17151 /* Singelton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4CA188F9EC400C17151 /* Singelton.m */; };
 		ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BC187AE89E001AC6FA /* CopyViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C0187AE9C6001AC6FA /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BF187AE9C6001AC6FA /* People.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0C2187AF494001AC6FA /* NSMutableArray+DeepCopy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -104,6 +105,8 @@
 		2ACCA4C5188F65F600C17151 /* AnimalTestPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalTestPro.h; sourceTree = "<group>"; };
 		2ACCA4C6188F6E4000C17151 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
 		2ACCA4C7188F6E4000C17151 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		2ACCA4C9188F9EC400C17151 /* Singelton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singelton.h; sourceTree = "<group>"; };
+		2ACCA4CA188F9EC400C17151 /* Singelton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singelton.m; sourceTree = "<group>"; };
 		ED05E0BB187AE89E001AC6FA /* CopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
 		ED05E0BC187AE89E001AC6FA /* CopyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
 		ED05E0BE187AE9C6001AC6FA /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 				2ACCA4C2188F61BF00C17151 /* Cat.m */,
 				2ACCA4C6188F6E4000C17151 /* HttpRequest.h */,
 				2ACCA4C7188F6E4000C17151 /* HttpRequest.m */,
+				2ACCA4C9188F9EC400C17151 /* Singelton.h */,
+				2ACCA4CA188F9EC400C17151 /* Singelton.m */,
 			);
 			name = Design;
 			sourceTree = "<group>";
@@ -444,6 +449,7 @@
 				2A94BE6E1889159500B298D1 /* SortViewController.m in Sources */,
 				2ACCA4B9188F616D00C17151 /* DesignPatterns.m in Sources */,
 				EDEF46BA187909C00081612F /* CustomTextField.m in Sources */,
+				2ACCA4CB188F9EC400C17151 /* Singelton.m in Sources */,
 				2A94BE6A1889113800B298D1 /* ChineseToPinyin.m in Sources */,
 				2A1993061864623B00845F3E /* RootViewController.m in Sources */,
 			);
