@@ -37,6 +37,9 @@
 		2ACCA4C3188F61BF00C17151 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4C2188F61BF00C17151 /* Cat.m */; };
 		2ACCA4C8188F6E4000C17151 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4C7188F6E4000C17151 /* HttpRequest.m */; };
 		2ACCA4CB188F9EC400C17151 /* Singelton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4CA188F9EC400C17151 /* Singelton.m */; };
+		2ACCA4CF1890F3ED00C17151 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4CE1890F3ED00C17151 /* DrawViewController.m */; };
+		2ACCA4D31890F49600C17151 /* DrawCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4D21890F49600C17151 /* DrawCircle.m */; };
+		2ACCA4D51890FACE00C17151 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACCA4D41890FACE00C17151 /* QuartzCore.framework */; };
 		ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BC187AE89E001AC6FA /* CopyViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C0187AE9C6001AC6FA /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BF187AE9C6001AC6FA /* People.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0C2187AF494001AC6FA /* NSMutableArray+DeepCopy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -107,6 +110,11 @@
 		2ACCA4C7188F6E4000C17151 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		2ACCA4C9188F9EC400C17151 /* Singelton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singelton.h; sourceTree = "<group>"; };
 		2ACCA4CA188F9EC400C17151 /* Singelton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singelton.m; sourceTree = "<group>"; };
+		2ACCA4CD1890F3ED00C17151 /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
+		2ACCA4CE1890F3ED00C17151 /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		2ACCA4D11890F49600C17151 /* DrawCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawCircle.h; sourceTree = "<group>"; };
+		2ACCA4D21890F49600C17151 /* DrawCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawCircle.m; sourceTree = "<group>"; };
+		2ACCA4D41890FACE00C17151 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ED05E0BB187AE89E001AC6FA /* CopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyViewController.h; sourceTree = "<group>"; };
 		ED05E0BC187AE89E001AC6FA /* CopyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyViewController.m; sourceTree = "<group>"; };
 		ED05E0BE187AE9C6001AC6FA /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ACCA4D51890FACE00C17151 /* QuartzCore.framework in Frameworks */,
 				2A19930F18657B8100845F3E /* EventKit.framework in Frameworks */,
 				2A1992D81864622800845F3E /* CoreGraphics.framework in Frameworks */,
 				2A1992DA1864622800845F3E /* UIKit.framework in Frameworks */,
@@ -169,6 +178,7 @@
 		2A1992D41864622800845F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2ACCA4D41890FACE00C17151 /* QuartzCore.framework */,
 				2A19930E18657B8100845F3E /* EventKit.framework */,
 				2A1992D51864622800845F3E /* Foundation.framework */,
 				2A1992D71864622800845F3E /* CoreGraphics.framework */,
@@ -185,6 +195,7 @@
 				2A1992E51864622800845F3E /* AppDelegate.m */,
 				2A5B4077186E9A8600279689 /* ViewController.h */,
 				2A5B4078186E9A8600279689 /* ViewController.m */,
+				2ACCA4D01890F3F000C17151 /* Draw */,
 				2ACCA4BA188F617300C17151 /* Design */,
 				2A94BE6B1889157E00B298D1 /* Sort */,
 				ED05E0BA187AE880001AC6FA /* Copy */,
@@ -289,6 +300,17 @@
 				2ACCA4CA188F9EC400C17151 /* Singelton.m */,
 			);
 			name = Design;
+			sourceTree = "<group>";
+		};
+		2ACCA4D01890F3F000C17151 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				2ACCA4CD1890F3ED00C17151 /* DrawViewController.h */,
+				2ACCA4CE1890F3ED00C17151 /* DrawViewController.m */,
+				2ACCA4D11890F49600C17151 /* DrawCircle.h */,
+				2ACCA4D21890F49600C17151 /* DrawCircle.m */,
+			);
+			name = Draw;
 			sourceTree = "<group>";
 		};
 		ED05E0BA187AE880001AC6FA /* Copy */ = {
@@ -431,6 +453,7 @@
 			files = (
 				ED05E0C0187AE9C6001AC6FA /* People.m in Sources */,
 				2A5B4079186E9A8600279689 /* ViewController.m in Sources */,
+				2ACCA4D31890F49600C17151 /* DrawCircle.m in Sources */,
 				2ACCA4C0188F61B300C17151 /* Dog.m in Sources */,
 				2ACCA4C8188F6E4000C17151 /* HttpRequest.m in Sources */,
 				ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */,
@@ -441,6 +464,7 @@
 				2A1992E21864622800845F3E /* main.m in Sources */,
 				2ACCA4C3188F61BF00C17151 /* Cat.m in Sources */,
 				2ACCA4BD188F61A600C17151 /* Animal.m in Sources */,
+				2ACCA4CF1890F3ED00C17151 /* DrawViewController.m in Sources */,
 				2A13130B187BDD2300A5F7D4 /* CTButton.m in Sources */,
 				2A19930918652CE800845F3E /* CustomCell.m in Sources */,
 				2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */,
