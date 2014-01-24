@@ -24,6 +24,8 @@
 		2A19930918652CE800845F3E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A19930818652CE800845F3E /* CustomCell.m */; };
 		2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A19930C18657A3100845F3E /* CalendarsRemindersViewController.m */; };
 		2A19930F18657B8100845F3E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A19930E18657B8100845F3E /* EventKit.framework */; };
+		2A312A01189241DC00D8ECA1 /* GaodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A312A00189241DC00D8ECA1 /* GaodeViewController.m */; };
+		2A312A0418924F8100D8ECA1 /* GaoDePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A312A0318924F8100D8ECA1 /* GaoDePoint.m */; };
 		2A5B4079186E9A8600279689 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B4078186E9A8600279689 /* ViewController.m */; };
 		2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B407C186E9D5D00279689 /* PlistViewController.m */; };
 		2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD906186EA3DB00C12850 /* PackingList.plist */; };
@@ -85,6 +87,10 @@
 		2A19930B18657A3100845F3E /* CalendarsRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarsRemindersViewController.h; sourceTree = "<group>"; };
 		2A19930C18657A3100845F3E /* CalendarsRemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarsRemindersViewController.m; sourceTree = "<group>"; };
 		2A19930E18657B8100845F3E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		2A3129FF189241DC00D8ECA1 /* GaodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaodeViewController.h; sourceTree = "<group>"; };
+		2A312A00189241DC00D8ECA1 /* GaodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaodeViewController.m; sourceTree = "<group>"; };
+		2A312A0218924F8100D8ECA1 /* GaoDePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaoDePoint.h; sourceTree = "<group>"; };
+		2A312A0318924F8100D8ECA1 /* GaoDePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaoDePoint.m; sourceTree = "<group>"; };
 		2A5B4077186E9A8600279689 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2A5B4078186E9A8600279689 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2A5B407B186E9D5D00279689 /* PlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistViewController.h; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 				2A1992E51864622800845F3E /* AppDelegate.m */,
 				2A5B4077186E9A8600279689 /* ViewController.h */,
 				2A5B4078186E9A8600279689 /* ViewController.m */,
+				2A3129FE189241B600D8ECA1 /* Gaode */,
 				2ACCA4D01890F3F000C17151 /* Draw */,
 				2ACCA4BA188F617300C17151 /* Design */,
 				2A94BE6B1889157E00B298D1 /* Sort */,
@@ -249,6 +256,17 @@
 				2A19930818652CE800845F3E /* CustomCell.m */,
 			);
 			name = TableTest;
+			sourceTree = "<group>";
+		};
+		2A3129FE189241B600D8ECA1 /* Gaode */ = {
+			isa = PBXGroup;
+			children = (
+				2A3129FF189241DC00D8ECA1 /* GaodeViewController.h */,
+				2A312A00189241DC00D8ECA1 /* GaodeViewController.m */,
+				2A312A0218924F8100D8ECA1 /* GaoDePoint.h */,
+				2A312A0318924F8100D8ECA1 /* GaoDePoint.m */,
+			);
+			name = Gaode;
 			sourceTree = "<group>";
 		};
 		2A5B407A186E9D3D00279689 /* 字母索引 */ = {
@@ -458,9 +476,11 @@
 				2ACCA4C8188F6E4000C17151 /* HttpRequest.m in Sources */,
 				ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */,
 				2A1992E61864622800845F3E /* AppDelegate.m in Sources */,
+				2A312A01189241DC00D8ECA1 /* GaodeViewController.m in Sources */,
 				EDEF46BE18790AAC0081612F /* CTField.m in Sources */,
 				2A8BDA23188636F20053E50E /* ClassExtend.m in Sources */,
 				2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */,
+				2A312A0418924F8100D8ECA1 /* GaoDePoint.m in Sources */,
 				2A1992E21864622800845F3E /* main.m in Sources */,
 				2ACCA4C3188F61BF00C17151 /* Cat.m in Sources */,
 				2ACCA4BD188F61A600C17151 /* Animal.m in Sources */,

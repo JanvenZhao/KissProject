@@ -16,6 +16,7 @@
 #import "SortViewController.h"
 #import "DesignPatterns.h"
 #import "DrawViewController.h"
+#import "GaodeViewController.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",@"排序",@"设计模式",@"动画画圆",nil];
+        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",@"排序",@"设计模式",@"动画画圆",@"高德Wap调用",nil];
     }
     return self;
 }
@@ -170,6 +171,10 @@
         DrawViewController *draw = [[DrawViewController alloc] init];
         draw.title = title;
         [self.navigationController pushViewController:draw animated:YES];
+    }else if (indexPath.row == 9){
+        GaodeViewController *gaode = [[GaodeViewController alloc] init];
+        gaode.title = title;
+        [self.navigationController pushViewController:gaode animated:YES];
     }
 }
 
