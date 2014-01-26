@@ -10,6 +10,18 @@
 
 @implementation GaoDePoint
 
+-(id)init{
+
+    if (self = [super init]) {
+        //
+    }
+    return self;
+}
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate{
+
+    _coordinate = newCoordinate;
+    
+}
 
 
 @end

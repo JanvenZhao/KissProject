@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface GaoDePoint : NSObject
+@interface GaoDePoint : NSObject<MKAnnotation>
 
 /*
  "formatted_address": "山东省济南市市中区火车站",
@@ -49,5 +50,11 @@
 @property (nonatomic,retain) NSArray *number;       //门牌号
 
 @property (nonatomic,retain) NSString *level;   //匹配级别字符串
+
+
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readonly, copy) NSString *title;
+
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 
 @end

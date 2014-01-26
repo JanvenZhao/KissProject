@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HttpRequest.h"
-@interface GaodeViewController : UIViewController<HttpRequestDelegate>{
+#import <MapKit/MapKit.h>
+@interface GaodeViewController : UIViewController<MKMapViewDelegate,UISearchBarDelegate,HttpRequestDelegate>{
 
     NSOperationQueue *_queue;
-    
+    MKMapView *map;
 }
 
 @end

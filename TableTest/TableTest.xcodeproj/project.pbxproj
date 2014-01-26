@@ -26,6 +26,8 @@
 		2A19930F18657B8100845F3E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A19930E18657B8100845F3E /* EventKit.framework */; };
 		2A312A01189241DC00D8ECA1 /* GaodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A312A00189241DC00D8ECA1 /* GaodeViewController.m */; };
 		2A312A0418924F8100D8ECA1 /* GaoDePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A312A0318924F8100D8ECA1 /* GaoDePoint.m */; };
+		2A312A061894A95F00D8ECA1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A312A051894A95F00D8ECA1 /* MapKit.framework */; };
+		2A312A091894E92800D8ECA1 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A312A081894E92800D8ECA1 /* Annotation.m */; };
 		2A5B4079186E9A8600279689 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B4078186E9A8600279689 /* ViewController.m */; };
 		2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B407C186E9D5D00279689 /* PlistViewController.m */; };
 		2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD906186EA3DB00C12850 /* PackingList.plist */; };
@@ -91,6 +93,9 @@
 		2A312A00189241DC00D8ECA1 /* GaodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaodeViewController.m; sourceTree = "<group>"; };
 		2A312A0218924F8100D8ECA1 /* GaoDePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaoDePoint.h; sourceTree = "<group>"; };
 		2A312A0318924F8100D8ECA1 /* GaoDePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaoDePoint.m; sourceTree = "<group>"; };
+		2A312A051894A95F00D8ECA1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2A312A071894E92800D8ECA1 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		2A312A081894E92800D8ECA1 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		2A5B4077186E9A8600279689 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2A5B4078186E9A8600279689 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2A5B407B186E9D5D00279689 /* PlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistViewController.h; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A312A061894A95F00D8ECA1 /* MapKit.framework in Frameworks */,
 				2ACCA4D51890FACE00C17151 /* QuartzCore.framework in Frameworks */,
 				2A19930F18657B8100845F3E /* EventKit.framework in Frameworks */,
 				2A1992D81864622800845F3E /* CoreGraphics.framework in Frameworks */,
@@ -184,6 +190,7 @@
 		2A1992D41864622800845F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A312A051894A95F00D8ECA1 /* MapKit.framework */,
 				2ACCA4D41890FACE00C17151 /* QuartzCore.framework */,
 				2A19930E18657B8100845F3E /* EventKit.framework */,
 				2A1992D51864622800845F3E /* Foundation.framework */,
@@ -265,6 +272,8 @@
 				2A312A00189241DC00D8ECA1 /* GaodeViewController.m */,
 				2A312A0218924F8100D8ECA1 /* GaoDePoint.h */,
 				2A312A0318924F8100D8ECA1 /* GaoDePoint.m */,
+				2A312A071894E92800D8ECA1 /* Annotation.h */,
+				2A312A081894E92800D8ECA1 /* Annotation.m */,
 			);
 			name = Gaode;
 			sourceTree = "<group>";
@@ -479,6 +488,7 @@
 				2A312A01189241DC00D8ECA1 /* GaodeViewController.m in Sources */,
 				EDEF46BE18790AAC0081612F /* CTField.m in Sources */,
 				2A8BDA23188636F20053E50E /* ClassExtend.m in Sources */,
+				2A312A091894E92800D8ECA1 /* Annotation.m in Sources */,
 				2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */,
 				2A312A0418924F8100D8ECA1 /* GaoDePoint.m in Sources */,
 				2A1992E21864622800845F3E /* main.m in Sources */,
