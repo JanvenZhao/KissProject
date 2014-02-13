@@ -59,6 +59,7 @@
 		EDE7C33418AD0A3000739338 /* T0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32E18AD0A3000739338 /* T0@2x.png */; };
 		EDE7C33518AD0A3000739338 /* T1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32F18AD0A3000739338 /* T1@2x.png */; };
 		EDE7C33618AD0A3000739338 /* T2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C33018AD0A3000739338 /* T2@2x.png */; };
+		EDE7C33818AD151500739338 /* AirportList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C33718AD151500739338 /* AirportList.plist */; };
 		EDEF46BA187909C00081612F /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF46B9187909C00081612F /* CustomTextField.m */; };
 		EDEF46BE18790AAC0081612F /* CTField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF46BD18790AAC0081612F /* CTField.m */; };
 		EDEF46C018790CF30081612F /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDEF46BF18790CF30081612F /* qq@2x.png */; };
@@ -156,6 +157,7 @@
 		EDE7C32E18AD0A3000739338 /* T0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T0@2x.png"; sourceTree = "<group>"; };
 		EDE7C32F18AD0A3000739338 /* T1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T1@2x.png"; sourceTree = "<group>"; };
 		EDE7C33018AD0A3000739338 /* T2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T2@2x.png"; sourceTree = "<group>"; };
+		EDE7C33718AD151500739338 /* AirportList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirportList.plist; sourceTree = "<group>"; };
 		EDEF46B8187909C00081612F /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		EDEF46B9187909C00081612F /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		EDEF46BC18790AAC0081612F /* CTField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTField.h; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 				EDE7C32E18AD0A3000739338 /* T0@2x.png */,
 				EDE7C32F18AD0A3000739338 /* T1@2x.png */,
 				EDE7C33018AD0A3000739338 /* T2@2x.png */,
+				EDE7C33718AD151500739338 /* AirportList.plist */,
 			);
 			name = TaxiResource;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				EDE7C33418AD0A3000739338 /* T0@2x.png in Resources */,
 				EDE7C33218AD0A3000739338 /* T4@2x.png in Resources */,
 				2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */,
+				EDE7C33818AD151500739338 /* AirportList.plist in Resources */,
 				EDE7C33618AD0A3000739338 /* T2@2x.png in Resources */,
 				EDE7C32918AD0A2700739338 /* T1_4@2x.png in Resources */,
 				EDE7C33118AD0A3000739338 /* T3@2x.png in Resources */,
