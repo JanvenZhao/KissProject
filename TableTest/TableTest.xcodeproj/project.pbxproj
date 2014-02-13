@@ -47,6 +47,18 @@
 		ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BC187AE89E001AC6FA /* CopyViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C0187AE9C6001AC6FA /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BF187AE9C6001AC6FA /* People.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0C2187AF494001AC6FA /* NSMutableArray+DeepCopy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EDE7C32518AD0A2700739338 /* T3_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C31F18AD0A2700739338 /* T3_4@2x.png */; };
+		EDE7C32618AD0A2700739338 /* T4_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32018AD0A2700739338 /* T4_4@2x.png */; };
+		EDE7C32718AD0A2700739338 /* T5_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32118AD0A2700739338 /* T5_4@2x.png */; };
+		EDE7C32818AD0A2700739338 /* T0_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32218AD0A2700739338 /* T0_4@2x.png */; };
+		EDE7C32918AD0A2700739338 /* T1_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32318AD0A2700739338 /* T1_4@2x.png */; };
+		EDE7C32A18AD0A2700739338 /* T2_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32418AD0A2700739338 /* T2_4@2x.png */; };
+		EDE7C33118AD0A3000739338 /* T3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32B18AD0A3000739338 /* T3@2x.png */; };
+		EDE7C33218AD0A3000739338 /* T4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32C18AD0A3000739338 /* T4@2x.png */; };
+		EDE7C33318AD0A3000739338 /* T5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32D18AD0A3000739338 /* T5@2x.png */; };
+		EDE7C33418AD0A3000739338 /* T0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32E18AD0A3000739338 /* T0@2x.png */; };
+		EDE7C33518AD0A3000739338 /* T1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32F18AD0A3000739338 /* T1@2x.png */; };
+		EDE7C33618AD0A3000739338 /* T2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C33018AD0A3000739338 /* T2@2x.png */; };
 		EDEF46BA187909C00081612F /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF46B9187909C00081612F /* CustomTextField.m */; };
 		EDEF46BE18790AAC0081612F /* CTField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF46BD18790AAC0081612F /* CTField.m */; };
 		EDEF46C018790CF30081612F /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDEF46BF18790CF30081612F /* qq@2x.png */; };
@@ -132,6 +144,18 @@
 		ED05E0BF187AE9C6001AC6FA /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 		ED05E0C1187AF494001AC6FA /* NSMutableArray+DeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+DeepCopy.h"; sourceTree = "<group>"; };
 		ED05E0C2187AF494001AC6FA /* NSMutableArray+DeepCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+DeepCopy.m"; sourceTree = "<group>"; };
+		EDE7C31F18AD0A2700739338 /* T3_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T3_4@2x.png"; sourceTree = "<group>"; };
+		EDE7C32018AD0A2700739338 /* T4_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T4_4@2x.png"; sourceTree = "<group>"; };
+		EDE7C32118AD0A2700739338 /* T5_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T5_4@2x.png"; sourceTree = "<group>"; };
+		EDE7C32218AD0A2700739338 /* T0_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T0_4@2x.png"; sourceTree = "<group>"; };
+		EDE7C32318AD0A2700739338 /* T1_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T1_4@2x.png"; sourceTree = "<group>"; };
+		EDE7C32418AD0A2700739338 /* T2_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T2_4@2x.png"; sourceTree = "<group>"; };
+		EDE7C32B18AD0A3000739338 /* T3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T3@2x.png"; sourceTree = "<group>"; };
+		EDE7C32C18AD0A3000739338 /* T4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T4@2x.png"; sourceTree = "<group>"; };
+		EDE7C32D18AD0A3000739338 /* T5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T5@2x.png"; sourceTree = "<group>"; };
+		EDE7C32E18AD0A3000739338 /* T0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T0@2x.png"; sourceTree = "<group>"; };
+		EDE7C32F18AD0A3000739338 /* T1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T1@2x.png"; sourceTree = "<group>"; };
+		EDE7C33018AD0A3000739338 /* T2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T2@2x.png"; sourceTree = "<group>"; };
 		EDEF46B8187909C00081612F /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
 		EDEF46B9187909C00081612F /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		EDEF46BC18790AAC0081612F /* CTField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTField.h; sourceTree = "<group>"; };
@@ -305,6 +329,7 @@
 			children = (
 				2A94BE6C1889159500B298D1 /* SortViewController.h */,
 				2A94BE6D1889159500B298D1 /* SortViewController.m */,
+				EDE7C31E18AD0A0C00739338 /* TaxiResource */,
 			);
 			name = Sort;
 			sourceTree = "<group>";
@@ -353,6 +378,25 @@
 				2A8BDA22188636F20053E50E /* ClassExtend.m */,
 			);
 			name = Copy;
+			sourceTree = "<group>";
+		};
+		EDE7C31E18AD0A0C00739338 /* TaxiResource */ = {
+			isa = PBXGroup;
+			children = (
+				EDE7C31F18AD0A2700739338 /* T3_4@2x.png */,
+				EDE7C32018AD0A2700739338 /* T4_4@2x.png */,
+				EDE7C32118AD0A2700739338 /* T5_4@2x.png */,
+				EDE7C32218AD0A2700739338 /* T0_4@2x.png */,
+				EDE7C32318AD0A2700739338 /* T1_4@2x.png */,
+				EDE7C32418AD0A2700739338 /* T2_4@2x.png */,
+				EDE7C32B18AD0A3000739338 /* T3@2x.png */,
+				EDE7C32C18AD0A3000739338 /* T4@2x.png */,
+				EDE7C32D18AD0A3000739338 /* T5@2x.png */,
+				EDE7C32E18AD0A3000739338 /* T0@2x.png */,
+				EDE7C32F18AD0A3000739338 /* T1@2x.png */,
+				EDE7C33018AD0A3000739338 /* T2@2x.png */,
+			);
+			name = TaxiResource;
 			sourceTree = "<group>";
 		};
 		EDEF46BB187909C80081612F /* CustomTextField */ = {
@@ -456,10 +500,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7BD909186EA9B100C12850 /* PackingLibrary.plist in Resources */,
+				EDE7C33418AD0A3000739338 /* T0@2x.png in Resources */,
+				EDE7C33218AD0A3000739338 /* T4@2x.png in Resources */,
 				2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */,
+				EDE7C33618AD0A3000739338 /* T2@2x.png in Resources */,
+				EDE7C32918AD0A2700739338 /* T1_4@2x.png in Resources */,
+				EDE7C33118AD0A3000739338 /* T3@2x.png in Resources */,
+				EDE7C32518AD0A2700739338 /* T3_4@2x.png in Resources */,
+				EDE7C32618AD0A2700739338 /* T4_4@2x.png in Resources */,
+				EDE7C33318AD0A3000739338 /* T5@2x.png in Resources */,
+				EDE7C33518AD0A3000739338 /* T1@2x.png in Resources */,
+				EDE7C32718AD0A2700739338 /* T5_4@2x.png in Resources */,
 				EDEF46C018790CF30081612F /* qq@2x.png in Resources */,
 				2A1992E01864622800845F3E /* InfoPlist.strings in Resources */,
+				EDE7C32A18AD0A2700739338 /* T2_4@2x.png in Resources */,
 				2A1992E81864622800845F3E /* Images.xcassets in Resources */,
+				EDE7C32818AD0A2700739338 /* T0_4@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
