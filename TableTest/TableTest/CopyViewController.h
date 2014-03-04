@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CopyViewController : UIViewController
+@interface CopyViewController : UIViewController<UIActionSheetDelegate>
+{
 
+    UIActionSheet *sheet;
+}
 @end

@@ -28,6 +28,7 @@
 		2A312A0418924F8100D8ECA1 /* GaoDePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A312A0318924F8100D8ECA1 /* GaoDePoint.m */; };
 		2A312A061894A95F00D8ECA1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A312A051894A95F00D8ECA1 /* MapKit.framework */; };
 		2A312A091894E92800D8ECA1 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A312A081894E92800D8ECA1 /* Annotation.m */; };
+		2A46716418C56C610041F3B9 /* Utis.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A46716318C56C610041F3B9 /* Utis.m */; };
 		2A5B4079186E9A8600279689 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B4078186E9A8600279689 /* ViewController.m */; };
 		2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B407C186E9D5D00279689 /* PlistViewController.m */; };
 		2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD906186EA3DB00C12850 /* PackingList.plist */; };
@@ -109,6 +110,8 @@
 		2A312A051894A95F00D8ECA1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2A312A071894E92800D8ECA1 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		2A312A081894E92800D8ECA1 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		2A46716218C56C610041F3B9 /* Utis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utis.h; sourceTree = "<group>"; };
+		2A46716318C56C610041F3B9 /* Utis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utis.m; sourceTree = "<group>"; };
 		2A5B4077186E9A8600279689 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2A5B4078186E9A8600279689 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2A5B407B186E9D5D00279689 /* PlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistViewController.h; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				2A1992E51864622800845F3E /* AppDelegate.m */,
 				2A5B4077186E9A8600279689 /* ViewController.h */,
 				2A5B4078186E9A8600279689 /* ViewController.m */,
+				2A46716218C56C610041F3B9 /* Utis.h */,
+				2A46716318C56C610041F3B9 /* Utis.m */,
 				2A3129FE189241B600D8ECA1 /* Gaode */,
 				2ACCA4D01890F3F000C17151 /* Draw */,
 				2ACCA4BA188F617300C17151 /* Design */,
@@ -558,6 +563,7 @@
 				2A13130B187BDD2300A5F7D4 /* CTButton.m in Sources */,
 				2A19930918652CE800845F3E /* CustomCell.m in Sources */,
 				2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */,
+				2A46716418C56C610041F3B9 /* Utis.m in Sources */,
 				EDF873F81873B1FA002CE946 /* ZheDieTable.m in Sources */,
 				ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */,
 				2A94BE6E1889159500B298D1 /* SortViewController.m in Sources */,

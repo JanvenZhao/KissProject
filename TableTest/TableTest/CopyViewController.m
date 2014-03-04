@@ -102,23 +102,23 @@
 	// Do any additional setup after loading the view.
     
     
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (int i = 0; i<3; i++) {
-        People *p = [[People alloc] init];
-        p.name = [NSString stringWithFormat:@"Name-%d",i];
-        p.school = [NSString stringWithFormat:@"School-%d",i];
-        p.age = i;
-        [array addObject:p];
-        [p release];
-    }
-    
-    [self archivedArray:array];
-    [array release];
-    array = nil;
-
-    if (array) {
-        NSLog(@"Error");
-    }
+//    NSMutableArray *array = [[NSMutableArray alloc] init];
+//    for (int i = 0; i<3; i++) {
+//        People *p = [[People alloc] init];
+//        p.name = [NSString stringWithFormat:@"Name-%d",i];
+//        p.school = [NSString stringWithFormat:@"School-%d",i];
+//        p.age = i;
+//        [array addObject:p];
+//        [p release];
+//    }
+//    
+//    [self archivedArray:array];
+//    [array release];
+//    array = nil;
+//
+//    if (array) {
+//        NSLog(@"Error");
+//    }
     
     //容器类的要自己实现深复制。。。
 //    NSMutableArray *copy = [array deepMutableCopy];
@@ -133,6 +133,13 @@
 
     //[self customObjectWithDic];
  
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [btn setFrame:CGRectMake(0, 100, 320, 40)];
+    [btn setTitle:@"Tap" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(tapAndPopActionSheet) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    
 }
 
 -(void)customObjectWithDic{
@@ -165,5 +172,36 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)tapAndPopActionSheet{
+
+    sheet = [[UIActionSheet alloc] initWithTitle:@"\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                                                        delegate:self
+                                               cancelButtonTitle:nil
+                                          destructiveButtonTitle:nil
+                                               otherButtonTitles:nil,nil];
+    sheet.tag = 100;
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [btn setFrame:CGRectMake(10, 0, 64, 44)];
+    [btn setTitle:@"Cancel" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(dismissTheAction) forControlEvents:UIControlEventTouchUpInside];
+    [sheet addSubview:btn];
+    
+   // [sheet addButtonWithTitle:@"Cancel----"];
+    UIDatePicker *picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 44, 320, 216)];
+    [picker setDate:[NSDate date]];
+    [sheet addSubview:picker];
+    
+    [sheet   showInView:self.view];
+    
+}
+
+-(void)dismissTheAction{
+
+    [sheet dismissWithClickedButtonIndex:0 animated:YES];
+    
+}
+
 
 @end
