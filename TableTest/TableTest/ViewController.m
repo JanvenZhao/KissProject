@@ -17,6 +17,7 @@
 #import "DesignPatterns.h"
 #import "DrawViewController.h"
 #import "GaodeViewController.h"
+#import "PickerVC.h"
 
 @interface ViewController ()
 
@@ -29,7 +30,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",@"排序",@"设计模式",@"动画画圆",@"高德Wap调用",nil];
+        _exampleArray = [NSArray arrayWithObjects:@"两列Table",@"带字母索引",@"plist读写",@"TableView展开折叠",@"自定义TextField",@"复制",@"排序",@"设计模式",@"动画画圆",@"高德Wap调用",@"自定义Picker",nil];
     }
     return self;
 }
@@ -175,6 +176,10 @@
         GaodeViewController *gaode = [[GaodeViewController alloc] init];
         gaode.title = title;
         [self.navigationController pushViewController:gaode animated:YES];
+    }else if (indexPath.row == 10){
+        PickerVC *picker = [[PickerVC alloc] init];
+        picker.title = title;
+        [self.navigationController pushViewController:picker animated:YES];
     }
 }
 

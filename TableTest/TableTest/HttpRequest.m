@@ -26,6 +26,8 @@
     NSError *error = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:self.request returningResponse:&response error:&error];
     
+    
+    
     if (error) {
         [_delegate receiveError:error];
     }else{

@@ -12,4 +12,6 @@
 
 +(BOOL)simpleTestOfString:(id)object;
 
++(NSArray *)getDateArraysFromNowWithDays:(int)days;
+
 @end

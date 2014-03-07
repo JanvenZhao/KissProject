@@ -36,6 +36,7 @@
 		2A8BDA23188636F20053E50E /* ClassExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8BDA22188636F20053E50E /* ClassExtend.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2A94BE6A1889113800B298D1 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94BE681889113800B298D1 /* ChineseToPinyin.m */; };
 		2A94BE6E1889159500B298D1 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94BE6D1889159500B298D1 /* SortViewController.m */; };
+		2A9A056B18C96988005EDCC7 /* PickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A056A18C96988005EDCC7 /* PickerVC.m */; };
 		2ACCA4B9188F616D00C17151 /* DesignPatterns.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4B8188F616D00C17151 /* DesignPatterns.m */; };
 		2ACCA4BD188F61A600C17151 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4BC188F61A600C17151 /* Animal.m */; };
 		2ACCA4C0188F61B300C17151 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCA4BF188F61B300C17151 /* Dog.m */; };
@@ -124,6 +125,8 @@
 		2A94BE691889113800B298D1 /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
 		2A94BE6C1889159500B298D1 /* SortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
 		2A94BE6D1889159500B298D1 /* SortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
+		2A9A056918C96988005EDCC7 /* PickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerVC.h; sourceTree = "<group>"; };
+		2A9A056A18C96988005EDCC7 /* PickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerVC.m; sourceTree = "<group>"; };
 		2ACCA4B7188F616D00C17151 /* DesignPatterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignPatterns.h; sourceTree = "<group>"; };
 		2ACCA4B8188F616D00C17151 /* DesignPatterns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignPatterns.m; sourceTree = "<group>"; };
 		2ACCA4BB188F61A600C17151 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
@@ -239,6 +242,7 @@
 				2A5B4078186E9A8600279689 /* ViewController.m */,
 				2A46716218C56C610041F3B9 /* Utis.h */,
 				2A46716318C56C610041F3B9 /* Utis.m */,
+				2A9A056818C96924005EDCC7 /* Picker */,
 				2A3129FE189241B600D8ECA1 /* Gaode */,
 				2ACCA4D01890F3F000C17151 /* Draw */,
 				2ACCA4BA188F617300C17151 /* Design */,
@@ -339,6 +343,15 @@
 				EDE7C31E18AD0A0C00739338 /* TaxiResource */,
 			);
 			name = Sort;
+			sourceTree = "<group>";
+		};
+		2A9A056818C96924005EDCC7 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A056918C96988005EDCC7 /* PickerVC.h */,
+				2A9A056A18C96988005EDCC7 /* PickerVC.m */,
+			);
+			name = Picker;
 			sourceTree = "<group>";
 		};
 		2ACCA4BA188F617300C17151 /* Design */ = {
@@ -561,6 +574,7 @@
 				2ACCA4BD188F61A600C17151 /* Animal.m in Sources */,
 				2ACCA4CF1890F3ED00C17151 /* DrawViewController.m in Sources */,
 				2A13130B187BDD2300A5F7D4 /* CTButton.m in Sources */,
+				2A9A056B18C96988005EDCC7 /* PickerVC.m in Sources */,
 				2A19930918652CE800845F3E /* CustomCell.m in Sources */,
 				2A19930D18657A3100845F3E /* CalendarsRemindersViewController.m in Sources */,
 				2A46716418C56C610041F3B9 /* Utis.m in Sources */,
