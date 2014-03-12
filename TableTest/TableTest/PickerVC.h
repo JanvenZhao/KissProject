@@ -8,22 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
-
-    CustomPicker_Default,//默认
-    CustomPicker_One,
-
-}CustomPickerType;
-
-
-
-@interface PickerVC : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>{
-
-    UIPickerView *_picker;
-    
-    NSMutableArray * _date;
-    NSMutableArray * _hours;
-    NSMutableArray * _mins;
+@interface PickerVC : UIViewController<UIActionSheetDelegate>{
 }
 
 @end

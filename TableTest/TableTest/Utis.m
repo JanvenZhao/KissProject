@@ -58,6 +58,20 @@
                 break;
         }
         
+        switch (i) {
+            case 0:
+                weekDay = @"今天";
+                break;
+            case 1:
+                weekDay = @"明天";
+                break;
+             case 2:
+                weekDay = @"后天";
+                break;
+            default:
+                break;
+        }
+        
         NSString *value = [NSString stringWithFormat:@"%d月%d日 %@",dateComponents.month,dateComponents.day,weekDay];
         [array addObject:value];
     }

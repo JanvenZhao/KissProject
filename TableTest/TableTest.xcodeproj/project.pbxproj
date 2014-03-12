@@ -33,6 +33,7 @@
 		2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B407C186E9D5D00279689 /* PlistViewController.m */; };
 		2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD906186EA3DB00C12850 /* PackingList.plist */; };
 		2A7BD909186EA9B100C12850 /* PackingLibrary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7BD908186EA9B100C12850 /* PackingLibrary.plist */; };
+		2A8746AE18D04D0400D0E2B1 /* CustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8746AD18D04D0400D0E2B1 /* CustomPicker.m */; };
 		2A8BDA23188636F20053E50E /* ClassExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8BDA22188636F20053E50E /* ClassExtend.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2A94BE6A1889113800B298D1 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94BE681889113800B298D1 /* ChineseToPinyin.m */; };
 		2A94BE6E1889159500B298D1 /* SortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94BE6D1889159500B298D1 /* SortViewController.m */; };
@@ -119,6 +120,8 @@
 		2A5B407C186E9D5D00279689 /* PlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistViewController.m; sourceTree = "<group>"; };
 		2A7BD906186EA3DB00C12850 /* PackingList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PackingList.plist; sourceTree = "<group>"; };
 		2A7BD908186EA9B100C12850 /* PackingLibrary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PackingLibrary.plist; sourceTree = "<group>"; };
+		2A8746AC18D04D0400D0E2B1 /* CustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPicker.h; sourceTree = "<group>"; };
+		2A8746AD18D04D0400D0E2B1 /* CustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPicker.m; sourceTree = "<group>"; };
 		2A8BDA21188636F20053E50E /* ClassExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassExtend.h; sourceTree = "<group>"; };
 		2A8BDA22188636F20053E50E /* ClassExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassExtend.m; sourceTree = "<group>"; };
 		2A94BE681889113800B298D1 /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 			children = (
 				2A9A056918C96988005EDCC7 /* PickerVC.h */,
 				2A9A056A18C96988005EDCC7 /* PickerVC.m */,
+				2A8746AC18D04D0400D0E2B1 /* CustomPicker.h */,
+				2A8746AD18D04D0400D0E2B1 /* CustomPicker.m */,
 			);
 			name = Picker;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				2A8BDA23188636F20053E50E /* ClassExtend.m in Sources */,
 				2A312A091894E92800D8ECA1 /* Annotation.m in Sources */,
 				2A5B407D186E9D5D00279689 /* PlistViewController.m in Sources */,
+				2A8746AE18D04D0400D0E2B1 /* CustomPicker.m in Sources */,
 				2A312A0418924F8100D8ECA1 /* GaoDePoint.m in Sources */,
 				2A1992E21864622800845F3E /* main.m in Sources */,
 				2ACCA4C3188F61BF00C17151 /* Cat.m in Sources */,
