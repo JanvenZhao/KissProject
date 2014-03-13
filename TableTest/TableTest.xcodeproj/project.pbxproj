@@ -50,6 +50,8 @@
 		ED05E0BD187AE89E001AC6FA /* CopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BC187AE89E001AC6FA /* CopyViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C0187AE9C6001AC6FA /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0BF187AE9C6001AC6FA /* People.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED05E0C2187AF494001AC6FA /* NSMutableArray+DeepCopy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ED5AE43C18D1F18A00C2EAB2 /* FlightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5AE43B18D1F18A00C2EAB2 /* FlightCell.m */; };
+		ED5AE43E18D1F1EA00C2EAB2 /* FlightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED5AE43D18D1F1EA00C2EAB2 /* FlightCell.xib */; };
 		EDE7C32518AD0A2700739338 /* T3_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C31F18AD0A2700739338 /* T3_4@2x.png */; };
 		EDE7C32618AD0A2700739338 /* T4_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32018AD0A2700739338 /* T4_4@2x.png */; };
 		EDE7C32718AD0A2700739338 /* T5_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDE7C32118AD0A2700739338 /* T5_4@2x.png */; };
@@ -154,6 +156,9 @@
 		ED05E0BF187AE9C6001AC6FA /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 		ED05E0C1187AF494001AC6FA /* NSMutableArray+DeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+DeepCopy.h"; sourceTree = "<group>"; };
 		ED05E0C2187AF494001AC6FA /* NSMutableArray+DeepCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+DeepCopy.m"; sourceTree = "<group>"; };
+		ED5AE43A18D1F18A00C2EAB2 /* FlightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightCell.h; sourceTree = "<group>"; };
+		ED5AE43B18D1F18A00C2EAB2 /* FlightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightCell.m; sourceTree = "<group>"; };
+		ED5AE43D18D1F1EA00C2EAB2 /* FlightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightCell.xib; sourceTree = "<group>"; };
 		EDE7C31F18AD0A2700739338 /* T3_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T3_4@2x.png"; sourceTree = "<group>"; };
 		EDE7C32018AD0A2700739338 /* T4_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T4_4@2x.png"; sourceTree = "<group>"; };
 		EDE7C32118AD0A2700739338 /* T5_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T5_4@2x.png"; sourceTree = "<group>"; };
@@ -355,6 +360,9 @@
 				2A9A056A18C96988005EDCC7 /* PickerVC.m */,
 				2A8746AC18D04D0400D0E2B1 /* CustomPicker.h */,
 				2A8746AD18D04D0400D0E2B1 /* CustomPicker.m */,
+				ED5AE43A18D1F18A00C2EAB2 /* FlightCell.h */,
+				ED5AE43B18D1F18A00C2EAB2 /* FlightCell.m */,
+				ED5AE43D18D1F1EA00C2EAB2 /* FlightCell.xib */,
 			);
 			name = Picker;
 			sourceTree = "<group>";
@@ -530,6 +538,7 @@
 				EDE7C33218AD0A3000739338 /* T4@2x.png in Resources */,
 				2A7BD907186EA3DB00C12850 /* PackingList.plist in Resources */,
 				EDE7C33818AD151500739338 /* AirportList.plist in Resources */,
+				ED5AE43E18D1F1EA00C2EAB2 /* FlightCell.xib in Resources */,
 				EDE7C33618AD0A3000739338 /* T2@2x.png in Resources */,
 				EDE7C32918AD0A2700739338 /* T1_4@2x.png in Resources */,
 				EDE7C33118AD0A3000739338 /* T3@2x.png in Resources */,
@@ -566,6 +575,7 @@
 				2ACCA4D31890F49600C17151 /* DrawCircle.m in Sources */,
 				2ACCA4C0188F61B300C17151 /* Dog.m in Sources */,
 				2ACCA4C8188F6E4000C17151 /* HttpRequest.m in Sources */,
+				ED5AE43C18D1F18A00C2EAB2 /* FlightCell.m in Sources */,
 				ED05E0C3187AF494001AC6FA /* NSMutableArray+DeepCopy.m in Sources */,
 				2A1992E61864622800845F3E /* AppDelegate.m in Sources */,
 				2A312A01189241DC00D8ECA1 /* GaodeViewController.m in Sources */,

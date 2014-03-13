@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PickerVC : UIViewController<UIActionSheetDelegate>{
+@interface PickerVC : UIViewController<UIActionSheetDelegate,UITableViewDataSource,UITableViewDelegate>{
+    
+    UITableView *_tableView;
 }
 
 @end
