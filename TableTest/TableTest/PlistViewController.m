@@ -7,10 +7,12 @@
 //
 
 #import "PlistViewController.h"
-
+#import <objc/runtime.h>
 @interface PlistViewController ()
 
 @end
+
+static const char kRepresentedObject;
 
 @implementation PlistViewController
 
@@ -48,26 +50,26 @@
         
         //String
         
-        NSString *num = @"asdsadfsdafasdDASFDSAfSDF";
-        
-        BOOL ye = [[NSPredicate predicateWithFormat:@"SELF MATCHES '[A-Za-z]*'"] evaluateWithObject:num];
-        
-        if (ye) {
-            NSLog(@"全是字母");
-        }else{
-            NSLog(@"不完全是字幕呀");
-        }
-        
-        for (int i = 0; i < [num length]; i++) {
-            NSString *a = [num substringWithRange:NSMakeRange(i, 1)];
-            if ([[NSPredicate predicateWithFormat:@"SELF MATCHES '([a-zA-Z])'"] evaluateWithObject:a]) {
-                NSLog(@"%@",[num substringWithRange:NSMakeRange(i, 1)]);
-            }else{
-            
-                NSLog(@" 不是字母 %@",[num substringWithRange:NSMakeRange(i, 1)]);
-
-            }
-        }
+//        NSString *num = @"asdsadfsdafasdDASFDSAfSDF";
+//        
+//        BOOL ye = [[NSPredicate predicateWithFormat:@"SELF MATCHES '[A-Za-z]*'"] evaluateWithObject:num];
+//        
+//        if (ye) {
+//            NSLog(@"全是字母");
+//        }else{
+//            NSLog(@"不完全是字幕呀");
+//        }
+//        
+//        for (int i = 0; i < [num length]; i++) {
+//            NSString *a = [num substringWithRange:NSMakeRange(i, 1)];
+//            if ([[NSPredicate predicateWithFormat:@"SELF MATCHES '([a-zA-Z])'"] evaluateWithObject:a]) {
+//                NSLog(@"%@",[num substringWithRange:NSMakeRange(i, 1)]);
+//            }else{
+//            
+//                NSLog(@" 不是字母 %@",[num substringWithRange:NSMakeRange(i, 1)]);
+//
+//            }
+//        }
         
         
         
@@ -132,16 +134,19 @@
 //    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(dismissTheAlert) userInfo:nil repeats:NO];
     
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setFrame:CGRectMake(0, 0, 44, 44)];
-    [button setTitle:@"确认" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-  //  [button setTitleColor:[UIColor greenColor] forState:UIControlStateDisabled];
-    [button setEnabled:NO];
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
-    [self.navigationItem setRightBarButtonItem:item animated:YES];
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [button setFrame:CGRectMake(0, 0, 44, 44)];
+//    [button setTitle:@"确认" forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//  //  [button setTitleColor:[UIColor greenColor] forState:UIControlStateDisabled];
+//    [button setEnabled:NO];
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+//    [self.navigationItem setRightBarButtonItem:item animated:YES];
     
+    [self replaceMethord];
+    [self targetReplaceMethord];
     
+    [self showAlert];
 }
 
 -(void)dismissTheAlert{
@@ -154,4 +159,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark
+#pragma mark -------- RunTime Related
+
+void demoReplaceMethord(id SELF,SEL _cmd){
+
+    NSLog(@"demo ReplaceMethord");
+}
+
+-(void)replaceMethord{
+
+    Class strcls = [self class];
+    SEL targertSelector = @selector(targetReplaceMethord);
+    class_replaceMethod(strcls, targertSelector, (IMP)demoReplaceMethord, NULL);
+}
+
+-(void)targetReplaceMethord{
+
+    NSLog(@"targetReplaceMethord");
+}
+
+//挂载对象所需要的参数（UIAlertView挂载对象）
+-(void)showAlert
+{
+    UIAlertView *alert_a = [[UIAlertView alloc]initWithTitle:@"提示" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去看看", nil];
+    alert_a.tag = 100;
+    //objc_setAssociatedObject(alert, &amp;kRepresentedObject,@"我是被挂载的",OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(alert_a, &kRepresentedObject, @"我是挂载的", OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [alert_a show];
+}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        NSString *str = objc_getAssociatedObject(alertView,
+                                                 &kRepresentedObject);
+        NSLog(@"%@",str);
+    }
+}
 @end
